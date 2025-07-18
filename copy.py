@@ -24,7 +24,9 @@ DIRS = [
     (f"{CONFIG_DIR}/gtk-3.0/", "config/gtk-3.0"),
     (f"{CONFIG_DIR}/gtk-4.0/", "config/gtk-4.0"),
     (f"{CONFIG_DIR}/gtkrc-2.0", "config/gtkrc-2.0"),
-    (f"{HOME}/.zshrc", "zshrc")
+    (f"{HOME}/.zshrc", "zshrc"),
+    (f"{HOME}/.bin/", "bin"),
+    (f"{HOME}/.themes", "themes"),
 ]
 
 
