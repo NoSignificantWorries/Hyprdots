@@ -27,6 +27,7 @@ DIRS = [
     (f"{HOME}/.zshrc", "zshrc"),
     (f"{HOME}/.bin/", "bin"),
     (f"{HOME}/.themes", "themes"),
+    (f"{HOME}/System/", "packages"),
 ]
 
 
