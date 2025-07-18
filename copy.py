@@ -16,6 +16,15 @@ DIRS = [
     (f"{CONFIG_DIR}/bottom/", "config/bottom"),
     (f"{CONFIG_DIR}/btop/", "config/btop"),
     (f"{CONFIG_DIR}/dunst/", "config/dunst"),
+    (f"{CONFIG_DIR}/nvim/", "config/nvim"),
+    (f"{CONFIG_DIR}/lsd/", "config/lsd"),
+    (f"{CONFIG_DIR}/zathura/", "config/zathura"),
+    (f"{CONFIG_DIR}/qt5ct/", "config/qt5ct"),
+    (f"{CONFIG_DIR}/qt6ct/", "config/qt6ct"),
+    (f"{CONFIG_DIR}/gtk-3.0/", "config/gtk-3.0"),
+    (f"{CONFIG_DIR}/gtk-4.0/", "config/gtk-4.0"),
+    (f"{CONFIG_DIR}/gtkrc-2.0", "config/gtkrc-2.0"),
+    (f"{HOME}/.zshrc", "zshrc")
 ]
 
 
