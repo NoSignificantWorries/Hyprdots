@@ -8,8 +8,14 @@ CONFIG_DIR = f"{HOME}/.config/"
 
 DIRS = [
     (f"{CONFIG_DIR}/hypr/", "config/hypr/"),
+    (f"{CONFIG_DIR}/rofi/", "config/rofi"),
+    (f"{CONFIG_DIR}/waybar/", "config/waybar"),
     (f"{CONFIG_DIR}/atuin/", "config/atuin"),
     (f"{CONFIG_DIR}/neofetch/", "config/neofetch"),
+    (f"{CONFIG_DIR}/kitty/", "config/kitty"),
+    (f"{CONFIG_DIR}/bottom/", "config/bottom"),
+    (f"{CONFIG_DIR}/btop/", "config/btop"),
+    (f"{CONFIG_DIR}/dunst/", "config/dunst"),
 ]
 
 

@@ -1,0 +1,20 @@
+{
+    "custom/separator": {
+        "format": "|",
+        "tooltip": false,
+    },
+
+    "custom/separator-dot": {
+        "format": "•",
+        "tooltip": false,
+    },
+
+    "custom/powermenu": {
+        "format": " 󰐥 ",
+        "tooltip": false,
+        "class": "poweroff-button",
+        "interval": "once",
+        "on-click": "~/.bin/logout_menu.sh",
+    },
+}
+
