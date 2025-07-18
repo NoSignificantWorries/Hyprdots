@@ -7,7 +7,9 @@ REPO_DIR = f"{HOME}/Hyprdots"
 CONFIG_DIR = f"{HOME}/.config/"
 
 DIRS = [
-    (f"{CONFIG_DIR}/hypr/", "config/hypr/")
+    (f"{CONFIG_DIR}/hypr/", "config/hypr/"),
+    (f"{CONFIG_DIR}/atuin/", "config/atuin"),
+    (f"{CONFIG_DIR}/neofetch/", "config/neofetch"),
 ]
 
 
