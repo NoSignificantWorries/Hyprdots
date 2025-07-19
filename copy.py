@@ -10,6 +10,7 @@ DIRS = [
     (f"{CONFIG_DIR}/hypr/", "config/hypr/"),
     (f"{CONFIG_DIR}/rofi/", "config/rofi"),
     (f"{CONFIG_DIR}/waybar/", "config/waybar"),
+    (f"{CONFIG_DIR}/wlogout/", "config/wlogout"),
     (f"{CONFIG_DIR}/atuin/", "config/atuin"),
     (f"{CONFIG_DIR}/neofetch/", "config/neofetch"),
     (f"{CONFIG_DIR}/kitty/", "config/kitty"),
