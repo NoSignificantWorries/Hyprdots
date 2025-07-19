@@ -9,12 +9,10 @@ configuration {
     drun-display-format:         "{name}";
     window-format:               "{w}{t}";
     font:                        "JetBrainsMono Nerd Font 10";
-    // icon-theme:                  "Tela-circle-dracula";
     border-radius:               10;
 }
 
 @theme "~/.config/rofi/theme.rasi"
-
 
 // Main //
 window {
@@ -45,7 +43,7 @@ inputbar {
     padding:                     4em;
     children:                    [ "entry" ];
     background-color:            @main-bg;
-    background-image:            url("~/Pictures/wallpaper1.jpg", width);
+    background-image:            url("/home/dmitry/.wallpaper", width);
     border-radius:               1em 1em 0em 0em;
 }
 entry {

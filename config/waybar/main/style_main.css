@@ -13,9 +13,23 @@ window.top_bar#waybar {
     border-radius: 0px 0px 15px 15px;
 }
 
+window.bottom_bar#waybar {
+    background-color: alpha(@base, 0.8);
+    border-left: solid alpha(@surface1, 0.7) 2px;
+    border-top: solid alpha(@surface1, 0.7) 2px;
+    border-right: solid alpha(@surface1, 0.7) 2px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+window.left_bar#waybar {
+    background-color: alpha(@base, 0.8);
+    border: solid alpha(@surface1, 0.7) 2px;
+    border-radius: 15px;
+}
+
 /* module zones */
 window.top_bar .modules-left {
-    border-radius: 0px 15px 15px 15px;
+    padding-left: 14px;
 }
 
 window.top_bar .modules-right {
@@ -33,6 +47,36 @@ window.top_bar .modules-center {
     margin-bottom: 5px;
 }
 
+window.bottom_bar .modules-left {
+    background-color: alpha(@surface0, 0.7);
+    border-radius: 15px 15px 15px 0px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+window.bottom_bar .modules-right {
+    background-color: alpha(@surface0, 0.7);
+    border-radius: 15px 15px 0px 15px;
+    padding-left: 14px;
+}
+
+window.left_bar .modules-left {
+    padding-top: 14px;
+}
+
+window.left_bar .modules-right {
+    padding-bottom: 14px;
+}
+
+window.left_bar .modules-center {
+    font-size: 18px;
+    background-color: alpha(@surface0, 0.7);
+    border-radius: 0px 15px 15px 0px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-right: 10px;
+}
+
 /* separators */
 #custom-separator {
     color: @lavender;
@@ -46,23 +90,15 @@ window.top_bar .modules-center {
     padding-right: 6px;
 }
 
-#user {
-    border-radius: 0px 15px 15px 15px;
-    padding-right: 14px;
-    padding-left: 14px;
-    background-color: alpha(@surface0, 0.7);
-}
-
 /* workspaces */
 #workspaces {
     background-color: alpha(@base, 0.0);
-    border-radius: 5px;
-    margin-bottom: 2px;
+    border-radius: 40px;
 }
 
 #workspaces button {
     color: @peach;
-    border-radius: 5px;
+    border-radius: 30px;
 }
 
 #workspaces button.empty {
@@ -73,17 +109,17 @@ window.top_bar .modules-center {
     color: @green;
 }
 
-#tray {
-    padding-right: 14px;
-}
-
-#cpu {
-    padding-right: 8px;
-}
-
 /* clock */
 #clock.time {
     color: @green;
+}
+
+#clock.week {
+    color: @peach;
+}
+
+#clock.month {
+    color: @peach;
 }
 
 #clock.calendar {
@@ -257,7 +293,6 @@ window.top_bar .modules-center {
 /* bottom elements */
 #window {
     color: @mauve;
-    padding-left: 14px;
 }
 
 
@@ -266,9 +301,18 @@ window.top_bar .modules-center {
     background-color: alpha(@surface1, 0.7);
     padding-left: 15px;
     padding-right: 15px;
-    margin-left: 8px;
-    border-radius: 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    border-radius: 15px 15px 0px 15px;
+}
+
+
+#keyboard-state label {
+    color: @subtext0;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+
+#keyboard-state label.locked {
+    color: @yellow;
 }
 
