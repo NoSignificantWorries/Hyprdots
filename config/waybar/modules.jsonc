@@ -147,6 +147,7 @@
             "lower-medium": 30,
             "low": 10,
         },
+        "on-click": "kitty -e htop",
     },
     
     "memory": {
@@ -159,6 +160,7 @@
             "lower-medium": 30,
             "low": 10,
         },
+        "on-click": "kitty -e btop",
     },
 
     "disk": {
@@ -171,6 +173,7 @@
             "lower-medium": 30,
             "low": 10,
         },
+        "on-click": "kitty -e ncdu ~",
     },
 
     "temperature": {
