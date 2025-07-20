@@ -120,3 +120,6 @@ eval "$(atuin init zsh)"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
+
+# Created by `pipx` on 2025-07-20 08:36:55
+export PATH="$PATH:/home/dmitry/.local/bin"

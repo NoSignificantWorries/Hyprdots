@@ -69,6 +69,8 @@ bluez-utils
 blueman
 network-manager-applet
 
+lazygit
+
 gvfs
 glib2
 
@@ -83,4 +85,10 @@ gvfs-dnssd
 gvfs-goa
 gvfs-onedrive
 gvfs-wsdd
+
+mediainfo
+ouch
+
+python-pip
+python-pipx
 
