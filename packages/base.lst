@@ -69,3 +69,18 @@ bluez-utils
 blueman
 network-manager-applet
 
+gvfs
+glib2
+
+gvfs-mtp
+gvfs-afc
+gvfs-google
+gvfs-gphoto2
+gvfs-nfs
+gvfs-smb
+gvfs-afc
+gvfs-dnssd
+gvfs-goa
+gvfs-onedrive
+gvfs-wsdd
+
