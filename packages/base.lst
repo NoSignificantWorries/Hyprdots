@@ -1,3 +1,7 @@
+networkmanager
+nvim
+vi
+
 reflector
 rsync
 
@@ -86,9 +90,20 @@ gvfs-goa
 gvfs-onedrive
 gvfs-wsdd
 
+fd
+chafa
+zoxide
 mediainfo
 ouch
 
 python-pip
 python-pipx
+pyenv
+hexyl
+
+imagemagick
+feh
+dmenu
+
+tealdeer
 
