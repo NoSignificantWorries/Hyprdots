@@ -1,0 +1,274 @@
+@import "catppuccin_mocha.css";
+@import "statistics.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Fira Code";
+    font-size: 14px; }
+
+window.top_bar#waybar {
+    background-color: alpha(@base, 0.8);
+    border-left: solid alpha(@surface1, 0.7) 2px;
+    border-bottom: solid alpha(@surface1, 0.7) 2px;
+    border-right: solid alpha(@surface1, 0.7) 2px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+/* module zones */
+window.top_bar .modules-left {
+    border-radius: 0px 15px 15px 15px;
+}
+
+window.top_bar .modules-right {
+    border-radius: 15px 0px 15px 15px;
+    padding-right: 14px;
+}
+
+window.top_bar .modules-center {
+    font-weight: bold;
+    background-color: alpha(@surface0, 0.7);
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* separators */
+#custom-separator {
+    color: @lavender;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+#custom-separator-dot {
+    color: @lavender;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+#user {
+    border-radius: 0px 15px 15px 15px;
+    padding-right: 14px;
+    padding-left: 14px;
+    background-color: alpha(@surface0, 0.7);
+}
+
+/* workspaces */
+#workspaces {
+    background-color: alpha(@base, 0.0);
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+
+#workspaces button {
+    color: @peach;
+    border-radius: 5px;
+}
+
+#workspaces button.empty {
+    color: @overlay0;
+}
+
+#workspaces button.active {
+    color: @green;
+}
+
+#tray {
+    padding-right: 14px;
+}
+
+#cpu {
+    padding-right: 8px;
+}
+
+/* clock */
+#clock.time {
+    color: @green;
+}
+
+#clock.calendar {
+    color: @red;
+}
+
+/* right modules */
+#battery {
+    color: @teal;
+    background-color: alpha(@surface0, 0.7);
+    padding-right: 14px;
+    padding-left: 8px;
+    border-radius: 0px 15px 15px 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#battery.low {
+    color: @red;
+}
+
+#battery.lower-medium {
+    color: @maroon;
+}
+
+#battery.medium {
+    color: @peach;
+}
+
+#battery.upper-medium {
+    color: @flamingo;
+}
+
+#battery.high {
+    color: @rosewater;
+}
+
+
+#backlight {
+    color: @overlay0;
+    background-color: alpha(@surface0, 0.7);
+    border-radius: 15px 0px 0px 15px;
+    padding-left: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#backlight.low {
+    color: @overlay1;
+}
+
+#backlight.lower-medium {
+    color: @overlay2;
+}
+
+#backlight.medium {
+    color: @subtext0;
+}
+
+#backlight.upper-medium {
+    color: @subtext1;
+}
+
+#backlight.high {
+    color: @text;
+}
+
+/* sound */
+#pulseaudio {
+    color: @red;
+    background-color: alpha(@surface0, 0.7);
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 8px;
+    border-radius: 15px;
+}
+
+#pulseaudio.low {
+  color: @teal;
+}
+
+#pulseaudio.lower-medium {
+  color: @green;
+}
+
+#pulseaudio.medium {
+  color: @yellow;
+}
+
+#pulseaudio.upper-medium {
+  color: @peach;
+}
+
+#pulseaudio.high {
+  color: @maroon;
+}
+
+#pulseaudio.bluetooth {
+  color: @sapphire;
+}
+
+#pulseaudio.muted {
+  color: @surface2;
+}
+
+
+/* networking */
+#bluetooth {
+  background-color: alpha(@surface0, 0.7);
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 8px;
+}
+
+#bluetooth.disabled {
+  background-color: alpha(@surface0, 0.7);
+  color: @subtext0;
+}
+
+#bluetooth.on {
+  color: @blue;
+}
+
+#bluetooth.connected {
+  color: @sapphire;
+}
+
+#network {
+  background-color: alpha(@surface0, 0.7);
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 8px;
+}
+
+#network.disabled {
+  background-color: alpha(@surface0, 0.7);
+  color: @subtext0;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#network.wifi {
+  color: @teal;
+}
+
+
+#custom-powermenu {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d20f39;
+    background-color: alpha(@crust, 0.7);
+    border-radius: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* bottom elements */
+#window {
+    color: @mauve;
+    padding-left: 14px;
+}
+
+
+#language {
+    color: @text;
+    background-color: alpha(@surface1, 0.7);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 8px;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+

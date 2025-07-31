@@ -1,0 +1,44 @@
+{
+    "custom/separator": {
+        "format": "|",
+        "tooltip": false,
+    },
+
+    "custom/separator-dot": {
+        "format": "•",
+        "tooltip": false,
+    },
+
+    "custom/powermenu": {
+        "format": " 󰐥 ",
+        "tooltip": false,
+        "class": "poweroff-button",
+        "interval": "once",
+        "on-click": "~/.bin/logout_menu.sh",
+    },
+
+    "custom/gpu-util": {
+        "exec": "$HOME/.bin/waybar/gpu_util.sh",
+        "interval": 5,
+        "tooltip": false,
+        "format": "{}",
+        "on-click": "kitty -e nvtop",
+    },
+
+    "custom/gpu-mem": {
+        "exec": "$HOME/.bin/waybar/gpu_mem.sh",
+        "interval": 5,
+        "tooltip": false,
+        "format": "{}",
+        "on-click": "kitty -e nvtop",
+    },
+
+    "custom/gpu-temp": {
+        "exec": "$HOME/.bin/waybar/gpu_temp.sh",
+        "interval": 5,
+        "tooltip": false,
+        "format": "{}",
+        "on-click": "kitty -e nvtop",
+    },
+}
+
