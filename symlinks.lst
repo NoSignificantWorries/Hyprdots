@@ -1,0 +1,9 @@
+"Hyprdots/config/zshrc" ".zshrc"
+
+"Hyprdots/scripts/*" ".scripts/*"
+
+"Hyprdots/config/atuin/*" ".config/atuin/*"
+"Hyprdots/config/yazi/*" ".config/yazi/*"
+# "Hyprdots/config/btop/*" ".config/btop/*"
+# "Hyprdots/config/bottom/*" ".config/bottom/*"
+

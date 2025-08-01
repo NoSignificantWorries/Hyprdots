@@ -180,12 +180,12 @@ prepend_previewers = [
     # Adobe Illustrator, Adobe Photoshop is image/adobe.photoshop, already handled above
     { mime = "application/postscript", run = "mediainfo" },
     # Jupyter norebooks preview
-    # { name = "*.ipynb", run = "nbpreview" },
     { name = "*.csv", run = "rich-preview"}, # for csv files
     { name = "*.md", run = "rich-preview" }, # for markdown (.md) files
     { name = "*.rst", run = "rich-preview"}, # for restructured text (.rst) files
     { name = "*.ipynb", run = "rich-preview"}, # for jupyter notebooks (.ipynb)
     { name = "*.json", run = "rich-preview"}, # for json (.json) files
+    { name = "*.jsonc", run = "rich-preview"}, # for json (.json) files
     # Archive previewer
 	{ mime = "application/*zip",            run = "ouch" },
 	{ mime = "application/x-tar",           run = "ouch" },
