@@ -1,0 +1,24 @@
+.main-container {
+  background-color: #282a36;  // Dracula Theme background
+  color: #f8f8f2;             // Dracula Theme foreground
+  padding: 5px;
+}
+
+.clock {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+button {
+    background-color: #44475a;
+    color: #f8f8f2;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #6272a4;
+    }
+}
+

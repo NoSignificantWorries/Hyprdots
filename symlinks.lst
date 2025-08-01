@@ -8,6 +8,8 @@
 "Hyprdots/config/rofi/*" ".config/rofi/*"
 "Hyprdots/config/wlogout/*" ".config/wlogout/*"
 "Hyprdots/config/waybar/*" ".config/waybar/*"
+"Hyprdots/config/eww/*" ".config/eww/*"
+"Hyprdots/config/otter-launcher/*" ".config/otter-launcher/*"
 
 "Hyprdots/config/kitty/*" ".config/kitty/*"
 "Hyprdots/config/lsd/*" ".config/lsd/*"
@@ -16,4 +18,7 @@
 "Hyprdots/config/btop/*" ".config/btop/*"
 "Hyprdots/config/bottom/*" ".config/bottom/*"
 "Hyprdots/config/neofetch/*" ".config/neofetch/*"
+
+"Hyprdots/config/zathura/*" ".config/zathura/*"
+"Hyprdots/config/qutebrowser/*" ".config/qutebrowser/*"
 
