@@ -1,9 +1,12 @@
 "Hyprdots/config/zshrc" ".zshrc"
+"Hyprdots/config/mimeapps.list" ".config/mimeapps.list"
 
 "Hyprdots/scripts/*" ".scripts/*"
 
+"Hyprdots/config/dunst/*" ".config/dunst/*"
+
 "Hyprdots/config/atuin/*" ".config/atuin/*"
 "Hyprdots/config/yazi/*" ".config/yazi/*"
-# "Hyprdots/config/btop/*" ".config/btop/*"
-# "Hyprdots/config/bottom/*" ".config/bottom/*"
+"Hyprdots/config/btop/*" ".config/btop/*"
+"Hyprdots/config/bottom/*" ".config/bottom/*"
 
