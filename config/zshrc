@@ -136,8 +136,37 @@ export FZF_DEFAULT_OPTS=" \
 --color=selected-bg:#45475A \
 --color=border:#6C7086,label:#CDD6F4"
 
-function ff() {
-    dir=$(find ~ -type d 2>/dev/null | fzf --height=60% --style full --ghost="Chose dir...")
-    cd "$dir"
+
+function chose_glob_dir() {
+    dir=$(fd --full-path "$HOME" --type d --hidden 2>/dev/null | fzf --height=60% --style full --ghost="Chose dir..." --preview "bat --color=always --style=header,grid --line-range :100 {} 2>/dev/null || tree -C {}")
+    echo "$dir"
 }
+function chose_down_dir() {
+    dir=$(fd --full-path $(pwd) --type d --hidden 2>/dev/null | fzf --height=60% --style full --ghost="Chose dir..." --preview "bat --color=always --style=header,grid --line-range :100 {} 2>/dev/null || tree -C {}")
+    echo "$dir"
+}
+
+function cd_glob_dir() {
+    cd $(chose_glob_dir)
+}
+function cd_down_dir() {
+    cd $(chose_down_dir)
+}
+function cd_home() {
+    cd && clear
+}
+function cd_up() {
+    cd ..
+}
+
+function nvim-fzf() {
+  local target=$(fd --type f --type d --hidden --exclude .git | fzf --height 40% --style full --ghost="Chose destination..." --reverse --preview "bat --color=always --style=header,grid --line-range :100 {} 2>/dev/null || tree -C {}")
+  [ -n "$target" ] && nvim "$target"
+}
+
+bindkey -s '^H' 'cd_home\n'
+bindkey -s '^[[1;5D' 'cd_up\n'
+bindkey -s '^[[1;5A' 'nvim-fzf\n'
+bindkey -s '^[[1;5C' 'cd_down_dir\n'
+bindkey -s '^@' 'cd_glob_dir\n'
 
