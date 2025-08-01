@@ -7,6 +7,7 @@
 "Hyprdots/config/dunst/*" ".config/dunst/*"
 "Hyprdots/config/rofi/*" ".config/rofi/*"
 "Hyprdots/config/wlogout/*" ".config/wlogout/*"
+"Hyprdots/config/waybar/*" ".config/waybar/*"
 
 "Hyprdots/config/kitty/*" ".config/kitty/*"
 "Hyprdots/config/lsd/*" ".config/lsd/*"
