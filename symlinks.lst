@@ -3,10 +3,16 @@
 
 "Hyprdots/scripts/*" ".scripts/*"
 
+"Hyprdots/config/hypr/*" ".config/hypr/*"
 "Hyprdots/config/dunst/*" ".config/dunst/*"
+"Hyprdots/config/rofi/*" ".config/rofi/*"
+"Hyprdots/config/wlogout/*" ".config/wlogout/*"
 
+"Hyprdots/config/kitty/*" ".config/kitty/*"
+"Hyprdots/config/lsd/*" ".config/lsd/*"
 "Hyprdots/config/atuin/*" ".config/atuin/*"
 "Hyprdots/config/yazi/*" ".config/yazi/*"
 "Hyprdots/config/btop/*" ".config/btop/*"
 "Hyprdots/config/bottom/*" ".config/bottom/*"
+"Hyprdots/config/neofetch/*" ".config/neofetch/*"
 
