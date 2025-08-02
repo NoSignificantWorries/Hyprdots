@@ -138,19 +138,35 @@ export FZF_DEFAULT_OPTS=" \
 
 
 function chose_glob_dir() {
-    dir=$(fd --full-path "$HOME" --type d --hidden 2>/dev/null | fzf --height=60% --style full --ghost="Chose dir..." --preview "bat --color=always --style=header,grid --line-range :100 {} 2>/dev/null || tree -C {}")
+    local dir=$(fd --full-path "$HOME" --type d --hidden 2>/dev/null | fzf --height=60% --style full --ghost="Chose dir...")
     echo "$dir"
 }
 function chose_down_dir() {
-    dir=$(fd --full-path $(pwd) --type d --hidden 2>/dev/null | fzf --height=60% --style full --ghost="Chose dir..." --preview "bat --color=always --style=header,grid --line-range :100 {} 2>/dev/null || tree -C {}")
+    local dir=$(fd --full-path $(pwd) --type d --hidden 2>/dev/null | fzf --height=60% --style full --ghost="Chose dir...")
     echo "$dir"
+}
+function chose_glob_file() {
+    local target=$(fd --full-path "$HOME" --type f --type d --hidden --exclude .git | fzf --height 40% --style full --ghost="Chose destination..." --reverse --preview "bat --color=always --style=header,grid --line-range :100 {} 2>/dev/null || tree -C {}")
+    echo "$target"
+}
+function chose_down_file() {
+    local target=$(fd --full-path $(pwd) --type f --type d --hidden --exclude .git | fzf --height 40% --style full --ghost="Chose destination..." --reverse --preview "bat --color=always --style=header,grid --line-range :100 {} 2>/dev/null || tree -C {}")
+    echo "$target"
 }
 
 function cd_glob_dir() {
-    cd $(chose_glob_dir)
+    local dir="$(chose_glob_dir)"
+    if [[ -z "$dir" ]]; then
+        return 1
+    fi
+    cd "$dir"
 }
 function cd_down_dir() {
-    cd $(chose_down_dir)
+    local dir="$(chose_down_dir)"
+    if [[ -z "$dir" ]]; then
+        return 1
+    fi
+    cd "$dir"
 }
 function cd_home() {
     cd && clear
@@ -159,14 +175,57 @@ function cd_up() {
     cd ..
 }
 
-function nvim-fzf() {
-  local target=$(fd --type f --type d --hidden --exclude .git | fzf --height 40% --style full --ghost="Chose destination..." --reverse --preview "bat --color=always --style=header,grid --line-range :100 {} 2>/dev/null || tree -C {}")
-  [ -n "$target" ] && nvim "$target"
+function nvim-fzf-global() {
+    local old_dir="$(pwd)"
+
+    local target="$(chose_glob_file)"
+
+    if [[ -z "$target" ]]; then
+        return 1
+    fi
+
+    if [[ -d "$target" ]]; then
+        (
+            cd "$target" || return 1
+            nvim
+        )
+    else
+        (
+            cd "$(dirname "$target")" || return 1
+            nvim "$(basename "$target")"
+        )
+    fi
+
+    cd "$old_dir" || return 1
+}
+function nvim-fzf-down() {
+    local old_dir="$(pwd)"
+
+    local target="$(chose_down_file)"
+
+    if [[ -z "$target" ]]; then
+        return 1
+    fi
+
+    if [[ -d "$target" ]]; then
+        (
+            cd "$target" || return 1
+            nvim
+        )
+    else
+        (
+            cd "$(dirname "$target")" || return 1
+            nvim "$(basename "$target")"
+        )
+    fi
+
+    cd "$old_dir" || return 1
 }
 
 bindkey -s '^H' 'cd_home\n'
 bindkey -s '^[[1;5D' 'cd_up\n'
-bindkey -s '^[[1;5A' 'nvim-fzf\n'
+bindkey -s '^[[1;5A' 'nvim-fzf-global\n'
+bindkey -s '^[[1;5B' 'nvim-fzf-down\n'
 bindkey -s '^[[1;5C' 'cd_down_dir\n'
 bindkey -s '^@' 'cd_glob_dir\n'
 
