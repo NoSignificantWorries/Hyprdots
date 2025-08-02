@@ -159,14 +159,14 @@ function cd_glob_dir() {
     if [[ -z "$dir" ]]; then
         return 1
     fi
-    cd "$dir"
+    cd "$dir" || return 1
 }
 function cd_down_dir() {
     local dir="$(chose_down_dir)"
     if [[ -z "$dir" ]]; then
         return 1
     fi
-    cd "$dir"
+    cd "$dir" || return 1
 }
 function cd_home() {
     cd && clear
@@ -222,7 +222,101 @@ function nvim-fzf-down() {
     cd "$old_dir" || return 1
 }
 
-bindkey -s '^H' 'cd_home\n'
+function chose_glob_dir() {
+    local dir=$(fd --full-path "$HOME" --type d --hidden 2>/dev/null | fzf --height=60% --style full --ghost="Chose dir...")
+    echo "$dir"
+}
+function chose_down_dir() {
+    local dir=$(fd --full-path $(pwd) --type d --hidden 2>/dev/null | fzf --height=60% --style full --ghost="Chose dir...")
+    echo "$dir"
+}
+function chose_glob_file() {
+    local target=$(fd --full-path "$HOME" --type f --type d --hidden --exclude .git | fzf --height 40% --style full --ghost="Chose destination..." --reverse --preview "bat --color=always --style=header,grid --line-range :100 {} 2>/dev/null || tree -C {}")
+    echo "$target"
+}
+function chose_down_file() {
+    local target=$(fd --full-path $(pwd) --type f --type d --hidden --exclude .git | fzf --height 40% --style full --ghost="Chose destination..." --reverse --preview "bat --color=always --style=header,grid --line-range :100 {} 2>/dev/null || tree -C {}")
+    echo "$target"
+}
+
+function cd_glob_dir() {
+    local dir=$(chose_glob_dir)
+    if [[ -z "$dir" ]]; then
+        return 1
+    fi
+    cd "$dir"
+}
+function cd_down_dir() {
+    local dir=$(chose_down_dir)
+    if [[ -z "$dir" ]]; then
+        return 1
+    fi
+    cd "$dir"
+}
+function cd_home() {
+    cd && clear
+}
+function cd_up() {
+    cd ..
+}
+
+function nvim-fzf-global() {
+    local old_dir=$(pwd)
+
+    local target=$(chose_glob_file)
+
+    if [[ -z "$target" ]]; then
+        return 1
+    fi
+
+    if [[ -d "$target" ]]; then
+        cd "$target" && nvim
+    else
+        cd $(dirname "$target") && nvim $(basename "$target")
+    fi
+
+    cd "$old_dir"
+}
+function nvim-fzf-down() {
+    local old_dir=$(pwd)
+
+    local target=$(chose_down_file)
+
+    if [[ -z "$target" ]]; then
+        return 1
+    fi
+
+    if [[ -d "$target" ]]; then
+        cd "$target" && nvim
+    else
+        cd $(dirname "$target") && nvim $(basename "$target")
+    fi
+
+    cd "$old_dir"
+}
+
+function rich-preview() {
+    local target=$(fd --full-path $(pwd) --max-depth=1 --type f --hidden --exclude .git | fzf --height 40% --style full --ghost="Chose destination..." --reverse --preview "bat --color=always --style=header,grid --line-range :100 {} 2>/dev/null || tree -C {}")
+
+    if [[ -z "$target" ]]; then
+        return 1
+    fi
+
+    rich "$target" || return 1
+}
+
+function lsd_dir() {
+    lsd -a .
+}
+
+function tree_dir() {
+    tree .
+}
+
+bindkey -s '^R' 'rich-preview\n'
+bindkey -s '^E' 'tree_dir\n'
+bindkey -s '^A' 'lsd_dir\n'
+bindkey -s '^W' 'cd_home\n'
 bindkey -s '^[[1;5D' 'cd_up\n'
 bindkey -s '^[[1;5A' 'nvim-fzf-global\n'
 bindkey -s '^[[1;5B' 'nvim-fzf-down\n'
