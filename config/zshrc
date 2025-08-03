@@ -227,7 +227,11 @@ function chose_glob_dir() {
     echo "$dir"
 }
 function chose_down_dir() {
-    local dir=$(fd --full-path $(pwd) --type d --hidden 2>/dev/null | fzf --height=60% --style full --ghost="Chose dir...")
+    local dir=$(fd --max-depth=1 --full-path $(pwd) --type d --hidden 2>/dev/null | fzf \
+        --height=60% \
+        --style full \
+        --ghost="Chose dir..."
+    )
     echo "$dir"
 }
 function chose_glob_file() {
@@ -235,7 +239,7 @@ function chose_glob_file() {
     echo "$target"
 }
 function chose_down_file() {
-    local target=$(fd --full-path $(pwd) --type f --type d --hidden --exclude .git | fzf --height 40% --style full --ghost="Chose destination..." --reverse --preview "bat --color=always --style=header,grid --line-range :100 {} 2>/dev/null || tree -C {}")
+    local target=$(fd --max-depth=1 --full-path $(pwd) --type f --type d --hidden --exclude .git | fzf --height 40% --style full --ghost="Chose destination..." --reverse --preview "bat --color=always --style=header,grid --line-range :100 {} 2>/dev/null || tree -C {}")
     echo "$target"
 }
 
@@ -322,4 +326,5 @@ bindkey -s '^[[1;5A' 'nvim-fzf-global\n'
 bindkey -s '^[[1;5B' 'nvim-fzf-down\n'
 bindkey -s '^[[1;5C' 'cd_down_dir\n'
 bindkey -s '^@' 'cd_glob_dir\n'
+bindkey -s '^Y' 'yazi\n'
 

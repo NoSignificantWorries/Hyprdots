@@ -12,5 +12,5 @@ convert "$screenshot_file" -thumbnail 200 "$thumb_file"
 
 notify-send "Screenshot" "Region copied to clipboard" -i "$thumb_file"
 
-rm -f "$screenshot_file"
+rm -f "$screenshot_file" "$thumb_file"
 

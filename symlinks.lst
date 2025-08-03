@@ -22,3 +22,6 @@
 "Hyprdots/config/zathura/*" ".config/zathura/*"
 "Hyprdots/config/qutebrowser/*" ".config/qutebrowser/*"
 
+"Hyprdots/icons/low-battery.png" ".icons/low-battery.png"
+"Hyprdots/icons/critical-battery.png" ".icons/critical-battery.png"
+
