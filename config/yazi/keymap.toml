@@ -56,7 +56,5 @@ prepend_keymap = [
     ######################
     { on = "<C-m>", run = '''shell 'ripdrag -n -a -W 300 -H 400 "$@"'''', desc = "call DnD" },
 
-    { on = "<C-y>", run = "wl-copy $@", desc = "copy to wl-clipboard" },
-
 ]
 
