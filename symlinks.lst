@@ -1,4 +1,6 @@
 "Hyprdots/config/zshrc" ".zshrc"
+"Hyprdots/config/zsh-functions" "zsh-functions"
+"Hyprdots/config/zsh-bindings" "zsh-bindings"
 "Hyprdots/config/mimeapps.list" ".config/mimeapps.list"
 
 "Hyprdots/scripts/*" ".scripts/*"
@@ -8,7 +10,6 @@
 "Hyprdots/config/rofi/*" ".config/rofi/*"
 "Hyprdots/config/wlogout/*" ".config/wlogout/*"
 "Hyprdots/config/waybar/*" ".config/waybar/*"
-"Hyprdots/config/eww/*" ".config/eww/*"
 "Hyprdots/config/otter-launcher/*" ".config/otter-launcher/*"
 
 "Hyprdots/config/kitty/*" ".config/kitty/*"
