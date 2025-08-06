@@ -6,14 +6,14 @@ toggle_wifi() {
   wifi_state=$(nmcli radio wifi)
 
   if [[ "$wifi_state" == "enabled" ]]; then
-    pkexec nmcli radio wifi off
+    nmcli radio wifi off
     if [ $? -eq 0 ]; then
       notify-send "Networking" "Wi-Fi turned OFF"
     else
       notify-send "Networking" "Error turning off Wi-Fi" -u critical
     fi
   else
-    pkexec nmcli radio wifi on
+    nmcli radio wifi on
     if [ $? -eq 0 ]; then
       notify-send "Networking" "Wi-Fi turned on"
     else

@@ -2,7 +2,7 @@
 
 MEM_USED=$(nvidia-smi --query-gpu=memory.used --format=csv,noheader | sed 's/[^0-9]//g')
 MEM_TOTAL=$(nvidia-smi --query-gpu=memory.total --format=csv,noheader | sed 's/[^0-9]//g')
-MEM_PERCENT=$(echo "scale=2; $MEM_USED / $MEM_TOTAL * 100" | bc)
+MEM_PERCENT=$(echo "scale=0; $MEM_USED * 100 / $MEM_TOTAL" | bc)
 
 
 if [[ $MEM_PERCENT -le 20 ]]; then
