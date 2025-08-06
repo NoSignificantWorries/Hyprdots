@@ -8,22 +8,22 @@ toggle_wifi() {
   if [[ "$wifi_state" == "enabled" ]]; then
     nmcli radio wifi off
     if [ $? -eq 0 ]; then
-      notify-send "Networking" "Wi-Fi turned OFF"
+      notify-send "Networking" "Wi-Fi turned OFF" -i "$HOME/.icons/wifi-notify.png"
     else
-      notify-send "Networking" "Error turning off Wi-Fi" -u critical
+      notify-send "Networking" "ERROR turning off Wi-Fi" -u critical -i "$HOME/.icons/wifi-notify.png"
     fi
   else
     nmcli radio wifi on
     if [ $? -eq 0 ]; then
-      notify-send "Networking" "Wi-Fi turned on"
+      notify-send "Networking" "Wi-Fi turned ON" -i "$HOME/.icons/wifi-notify.png"
     else
-      notify-send "Networking" "Error turning on Wi-Fi" -u critical
+      notify-send "Networking" "ERROR turning on Wi-Fi" -u critical -i "$HOME/.icons/wifi-notify.png"
     fi
   fi
 }
 
 if ! command -v nmcli &> /dev/null; then
-  notify-send "Networking" "ERROR: nmcli not found." -u critical
+  notify-send "Networking" "ERROR: nmcli not found." -u critical -i "$HOME/.icons/wifi-notify.png"
   exit 1
 fi
 
