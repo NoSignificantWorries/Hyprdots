@@ -11,6 +11,7 @@
 "Hyprdots/config/wlogout/*" ".config/wlogout/*"
 "Hyprdots/config/waybar/*" ".config/waybar/*"
 "Hyprdots/config/otter-launcher/*" ".config/otter-launcher/*"
+"Hyprdots/config/nvim/*" ".config/nvim/*"
 
 "Hyprdots/config/kitty/*" ".config/kitty/*"
 "Hyprdots/config/lsd/*" ".config/lsd/*"
