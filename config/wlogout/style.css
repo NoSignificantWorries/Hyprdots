@@ -1,9 +1,9 @@
+@import "theme.css";
+
 * {
     background-image: none;
     font-size: 14px;
 }
-
-@import "theme.css";
 
 window {
     background-color: transparent;
