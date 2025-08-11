@@ -12,6 +12,9 @@
 "Hyprdots/config/waybar/*" ".config/waybar/*"
 "Hyprdots/config/otter-launcher/*" ".config/otter-launcher/*"
 "Hyprdots/config/nvim/*" ".config/nvim/*"
+# TODO: replace to correct way
+# "Hyprdots/config/eww/eww" ".config/eww/modules"
+"EWWdots/eww/*" ".config/eww/*"
 
 "Hyprdots/config/kitty/*" ".config/kitty/*"
 "Hyprdots/config/lsd/*" ".config/lsd/*"

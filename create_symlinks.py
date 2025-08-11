@@ -29,12 +29,16 @@ def parse_mappings(mapping_file):
                 src_path = src_path[:-1]
                 dst_path = dst_path[:-1]
                 
-                ignoring = ["linkignore"]
+                ignoring = ["linkignore", "!linkignore"]
                 if "linkignore" in os.listdir(src_path):
                     with open(os.path.join(src_path, "linkignore"), 'r') as ignore:
                         ignoring += ignore.read().split("\n")[:-1]
+                not_ignoring = []
+                if "!linkignore" in os.listdir(src_path):
+                    with open(os.path.join(src_path, "!linkignore"), 'r') as not_ignore:
+                        not_ignoring += not_ignore.read().split("\n")[:-1]
                 
-                for file in os.listdir(src_path):
+                for file in os.listdir(src_path) if not not_ignoring else not_ignoring:
                     if file in ignoring:
                         continue
                     src_file, dst_file = os.path.join(src_path, file), os.path.join(dst_path, file)
