@@ -103,7 +103,8 @@ hexyl
 
 imagemagick
 feh
-dmenu
 
-tealdeer
+rustup
+rust-src
+tumbler
 

@@ -1,6 +1,18 @@
 #!/bin/sh
 
-TEMP=$(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader)
+TEMP_INFO=$(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader 2>&1)
+
+if [ $? -ne 0 ]; then
+    echo "<span color='#f38ba8'> ERR</span>"
+    exit 0
+fi
+
+TEMP=$(echo "$TEMP_INFO" | awk -F', ' '{print $1}' | sed 's/[^0-9]//g')
+
+if [ -z "$TEMP" ]; then
+    echo "<span color='#f38ba8'> ERR</span>"
+    exit 0
+fi
 
 COLOR="#a6e3a1"
 
