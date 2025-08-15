@@ -1,3 +1,4 @@
-Catppuccin-Mocha/
-Colloid-Cursors/
+Catppuccin-Mocha
+Papirus
+Colloid-Cursors
 

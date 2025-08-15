@@ -110,7 +110,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-. "$HOME/.atuin/bin/env"
+# . "$HOME/.atuin/bin/env"
 
 eval "$(atuin init zsh)"
 
@@ -141,4 +141,10 @@ export FZF_DEFAULT_OPTS=" \
 
 source "$HOME/zsh-functions"
 source "$HOME/zsh-bindings"
+
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/dmitry/.dart-cli-completion/zsh-config.zsh ]] && . /home/dmitry/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
 

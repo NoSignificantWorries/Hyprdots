@@ -178,7 +178,7 @@
 
     "temperature": {
         "tooltip": false,
-        "thermal-zone": 6,
+        "thermal-zone": 4,
         "critical-threshold": 80,
         "format": "{icon} {temperatureC}󰔄",
         "format-icons": [ "", "", "", "", "" ],

@@ -59,7 +59,7 @@
         "margin-bottom": 8,
 
         "modules-left": ["wlr/taskbar"],
-        "modules-center": ["cpu", "memory", "disk", "temperature", "custom/separator-dot", "custom/gpu-util", "custom/gpu-mem", "custom/gpu-temp"],
+        "modules-center": ["cpu", "memory", "disk", "temperature"],
         "modules-right": ["tray"],
     },
 ]
