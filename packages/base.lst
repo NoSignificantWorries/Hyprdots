@@ -5,8 +5,8 @@ grub
 efibootmgr
 os-prober
 
-reflector
-rsync
+# reflector
+# rsync
 
 wget
 curl
@@ -14,8 +14,8 @@ git
 
 base-devel
 
-# mesa
-nvidia
+mesa
+# nvidia
 
 kitty
 hyprland
