@@ -1,6 +1,9 @@
-networkmanager
 nvim
+networkmanager
 vi
+grub
+efibootmgr
+os-prober
 
 reflector
 rsync
@@ -11,8 +14,10 @@ git
 
 base-devel
 
+# mesa
 nvidia
 
+kitty
 hyprland
 hyprpaper
 hyprlock
@@ -23,6 +28,7 @@ btop
 bottom
 powertop
 ncdu
+mission-center
 
 upower
 brightnessctl
@@ -36,7 +42,7 @@ pipewire-jack
 wireplumber
 
 fontconfig
-ttf-font-awesome
+woff2-font-awesome
 noto-fonts-emoji
 
 unzip
@@ -55,12 +61,23 @@ qt6-svg
 qt6-declarative
 qt5-quickcontrols2
 
-zsh
-
 gtk3
 gtk4
 xdg-desktop-portal
 xdg-desktop-portal-gtk
+
+waybar
+yazi
+doublecmd
+telegram-desktop
+# firefox
+vivaldi
+qutebrowser
+obsidian
+inkscape
+
+lsd
+zsh
 
 libnotify
 grim
@@ -90,6 +107,7 @@ gvfs-goa
 gvfs-onedrive
 gvfs-wsdd
 
+fzf
 fd
 chafa
 zoxide
