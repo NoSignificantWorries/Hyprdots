@@ -68,6 +68,7 @@ xdg-desktop-portal
 xdg-desktop-portal-gtk
 
 waybar
+rofi-wayland
 yazi
 doublecmd
 telegram-desktop
@@ -130,4 +131,5 @@ rustup
 rust-src
 
 steam
+freecad
 

@@ -15,6 +15,8 @@
 # "Hyprdots/config/eww/eww" ".config/eww/modules"
 "EWWdots/eww/*" ".config/eww/*"
 
+"Hyprdots/config/Kvantum/*" ".config/Kvantum/*"
+
 "Hyprdots/config/kitty/*" ".config/kitty/*"
 "Hyprdots/config/lsd/*" ".config/lsd/*"
 "Hyprdots/config/atuin/*" ".config/atuin/*"
