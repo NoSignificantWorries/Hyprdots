@@ -17,7 +17,7 @@
 
         "modules-left": ["hyprland/workspaces"],
         "modules-center": ["clock#time", "custom/separator", "clock#week", "custom/separator-dot", "clock#month", "custom/separator", "clock#calendar"],
-        "modules-right": ["pulseaudio", "backlight", "battery", "bluetooth",  "network", "custom/powermenu"],
+        "modules-right": ["pulseaudio", "network", "custom/powermenu"],
     },
 
     // bottom bar
