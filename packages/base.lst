@@ -44,6 +44,7 @@ wireplumber
 fontconfig
 woff2-font-awesome
 noto-fonts-emoji
+papirus-icon-theme
 
 unzip
 tar
@@ -107,6 +108,7 @@ gvfs-goa
 gvfs-onedrive
 gvfs-wsdd
 
+bc
 fzf
 fd
 chafa
@@ -121,8 +123,11 @@ hexyl
 
 imagemagick
 feh
+tumbler
+zenity
 
 rustup
 rust-src
-tumbler
+
+steam
 
