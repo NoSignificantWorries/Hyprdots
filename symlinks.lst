@@ -16,6 +16,8 @@
 # "Hyprdots/config/eww/eww" ".config/eww/modules"
 "EWWdots/eww/*" ".config/eww/*"
 
+"Hyprdots/config/Kvantum/*" ".config/Kvantum/*"
+
 "Hyprdots/config/kitty/*" ".config/kitty/*"
 "Hyprdots/config/lsd/*" ".config/lsd/*"
 "Hyprdots/config/atuin/*" ".config/atuin/*"
@@ -26,6 +28,8 @@
 
 "Hyprdots/config/zathura/*" ".config/zathura/*"
 "Hyprdots/config/qutebrowser/*" ".config/qutebrowser/*"
+# sessions
+"Hyprdots/config/qutebrowser/sessions/*" ".local/share/qutebrowser/sessions/*"
 
 "Hyprdots/icons/low-battery.png" ".icons/low-battery.png"
 "Hyprdots/icons/critical-battery.png" ".icons/critical-battery.png"
