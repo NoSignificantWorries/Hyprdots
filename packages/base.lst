@@ -40,6 +40,7 @@ pipewire-alsa
 pipewire-pulse
 pipewire-jack
 wireplumber
+pavucontrol
 
 fontconfig
 woff2-font-awesome
