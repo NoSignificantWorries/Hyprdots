@@ -79,6 +79,9 @@ qutebrowser
 obsidian
 inkscape
 zathura
+steam
+freecad
+blender
 
 lsd
 zsh
@@ -132,6 +135,4 @@ zenity
 rustup
 rust-src
 
-steam
-freecad
 
