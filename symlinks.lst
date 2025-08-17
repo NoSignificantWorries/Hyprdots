@@ -26,6 +26,7 @@
 "Hyprdots/config/neofetch/*" ".config/neofetch/*"
 
 "Hyprdots/config/zathura/*" ".config/zathura/*"
+
 "Hyprdots/config/qutebrowser/config.py" ".config/qutebrowser/config.py"
 # sessions
 "Hyprdots/config/qutebrowser/sessions/*" ".local/share/qutebrowser/sessions/*"
