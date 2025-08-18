@@ -89,6 +89,7 @@ zsh
 libnotify
 grim
 slurp
+wf-recorder
 wl-clipboard
 dunst
 
@@ -121,6 +122,7 @@ chafa
 zoxide
 mediainfo
 ouch
+tree
 
 python-pip
 python-pipx
