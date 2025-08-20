@@ -40,5 +40,15 @@
         "format": "{}",
         "on-click": "kitty -e nvtop",
     },
+    
+    "custom/recording": {
+        "exec": "~/.scripts/screen_rec.sh record-status",
+        "format": "{}",
+        "return-type": "json",
+        "on-click": "~/.scripts/screen_rec.sh record-area-start",
+        "on-click-right": "~/.scripts/screen_rec.sh record-stop",
+        "restart-interval": 1,
+        "tooltip": true
+    },
 }
 

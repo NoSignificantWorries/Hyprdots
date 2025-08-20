@@ -17,7 +17,7 @@
 
         "modules-left": ["hyprland/workspaces"],
         "modules-center": ["clock#time", "custom/separator", "clock#week", "custom/separator-dot", "clock#month", "custom/separator", "clock#calendar"],
-        "modules-right": ["pulseaudio", "backlight", "battery", "bluetooth",  "network", "custom/powermenu"],
+        "modules-right": ["custom/recording", "pulseaudio", "network", "custom/powermenu"],
     },
 
     // bottom bar
@@ -59,7 +59,7 @@
         "margin-bottom": 8,
 
         "modules-left": ["wlr/taskbar"],
-        "modules-center": ["cpu", "memory", "disk", "temperature"],
+        "modules-center": ["cpu", "memory", "disk", "temperature", "custom/separator-dot", "custom/gpu-util", "custom/gpu-mem", "custom/gpu-temp"],
         "modules-right": ["tray"],
     },
 ]

@@ -26,13 +26,15 @@
 "Hyprdots/config/neofetch/*" ".config/neofetch/*"
 
 "Hyprdots/config/zathura/*" ".config/zathura/*"
-
 "Hyprdots/config/qutebrowser/config.py" ".config/qutebrowser/config.py"
 # sessions
 "Hyprdots/config/qutebrowser/sessions/*" ".local/share/qutebrowser/sessions/*"
+
+"Hyprdots/config/mpv/*" ".config/mpv/*"
 
 "Hyprdots/icons/low-battery.png" ".icons/low-battery.png"
 "Hyprdots/icons/critical-battery.png" ".icons/critical-battery.png"
 "Hyprdots/icons/bluetooth-notify.png" ".icons/bluetooth-notify.png"
 "Hyprdots/icons/wifi-notify.png" ".icons/wifi-notify.png"
+"Hyprdots/icons/recording.png" ".icons/recording.png"
 
