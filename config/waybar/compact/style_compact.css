@@ -254,6 +254,17 @@ window.top_bar .modules-center {
 }
 
 
+#custom-recording {
+    background-color: alpha(@surface0, 0.7);
+    border-radius: 15px;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-right: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
 /* bottom elements */
 #window {
     color: @mauve;
