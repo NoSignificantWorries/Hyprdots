@@ -16,7 +16,7 @@
 
         "modules-left": ["user", "hyprland/workspaces", "hyprland/window"],
         "modules-center": ["cpu", "memory", "custom/separator", "clock#time", "custom/separator", "clock#calendar"],
-        "modules-right": ["tray", "custom/recording", "pulseaudio", "network", "hyprland/language", "custom/powermenu"],
+        "modules-right": ["tray", "custom/recording", "pulseaudio", "backlight", "battery", "bluetooth",  "network", "hyprland/language", "custom/powermenu"],
     },
 ]
 

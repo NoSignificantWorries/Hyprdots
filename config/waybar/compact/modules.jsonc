@@ -110,6 +110,48 @@
         "on-click": "kitty -e btop",
     },
 
+    "battery": {
+        "states": {
+            "high": 90,
+            "upper-medium": 70,
+            "medium": 50,
+            "lower-medium": 30,
+            "low": 10,
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󱐋{icon} {capacity}%",
+        "format-plugged": "󰚥{icon} {capacity}%",
+        "format-time": "{H} h {M} min",
+        "format-icons": [ "󱃍", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
+        "tooltip-format": "{timeTo}",
+    },
+    
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "󰌶",
+            "󱩎",
+            "󱩏",
+            "󱩐",
+            "󱩑",
+            "󱩒",
+            "󱩓",
+            "󱩔",
+            "󱩕",
+            "󱩖",
+            "󰛨",
+        ],
+        "tooltip": false,
+        "on-scroll": null,
+        "states": {
+            "high": 90,
+            "upper-medium": 70,
+            "medium": 50,
+            "lower-medium": 30,
+            "low": 10,
+        },
+    },
+
     "pulseaudio": {
         "states": {
             "high": 90,

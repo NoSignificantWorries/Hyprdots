@@ -31,8 +31,8 @@
     "hyprland/language": {
         "format-en": "EN (US)",
         "format-ru": "RU",
-        "keyboard-name": "yichip-2.4g-receiver",
-        "on-click": "hyprctl switchxkblayout yichip-2.4g-receiver next",
+        "keyboard-name": "at-translated-set-2-keyboard",
+        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
     },
 
     "tray": {
@@ -178,10 +178,53 @@
 
     "temperature": {
         "tooltip": false,
-        "thermal-zone": 2,
+        "thermal-zone": 4,
         "critical-threshold": 80,
         "format": "{icon} {temperatureC}󰔄",
         "format-icons": [ "", "", "", "", "" ],
+    },
+
+
+    "battery": {
+        "states": {
+            "high": 90,
+            "upper-medium": 70,
+            "medium": 50,
+            "lower-medium": 30,
+            "low": 10,
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󱐋{icon} {capacity}%",
+        "format-plugged": "󰚥{icon} {capacity}%",
+        "format-time": "{H} h {M} min",
+        "format-icons": [ "󱃍", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
+        "tooltip-format": "{timeTo}",
+    },
+    
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "󰌶",
+            "󱩎",
+            "󱩏",
+            "󱩐",
+            "󱩑",
+            "󱩒",
+            "󱩓",
+            "󱩔",
+            "󱩕",
+            "󱩖",
+            "󰛨",
+        ],
+        "tooltip": false,
+        "on-scroll": null,
+        "states": {
+            "high": 90,
+            "upper-medium": 70,
+            "medium": 50,
+            "lower-medium": 30,
+            "low": 10,
+        },
     },
 
     "pulseaudio": {

@@ -16,31 +16,7 @@
         "interval": "once",
         "on-click": "~/.scripts/logout_menu.sh",
     },
-
-    "custom/gpu-util": {
-        "exec": "$HOME/.scripts/waybar/gpu_util.sh",
-        "interval": 5,
-        "tooltip": false,
-        "format": "{}",
-        "on-click": "kitty -e nvtop",
-    },
-
-    "custom/gpu-mem": {
-        "exec": "$HOME/.scripts/waybar/gpu_mem.sh",
-        "interval": 5,
-        "tooltip": false,
-        "format": "{}",
-        "on-click": "kitty -e nvtop",
-    },
-
-    "custom/gpu-temp": {
-        "exec": "$HOME/.scripts/waybar/gpu_temp.sh",
-        "interval": 5,
-        "tooltip": false,
-        "format": "{}",
-        "on-click": "kitty -e nvtop",
-    },
-
+    
     "custom/recording": {
         "exec": "~/.scripts/screen_rec.sh record-status",
         "format": "{}",
@@ -50,5 +26,6 @@
         "restart-interval": 1,
         "tooltip": true
     },
+
 }
 

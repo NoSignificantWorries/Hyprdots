@@ -127,6 +127,7 @@ hexyl
 
 imagemagick
 feh
+mpv
 
 rustup
 rust-src
