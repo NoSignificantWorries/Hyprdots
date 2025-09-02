@@ -61,11 +61,19 @@ function cd_glob_dir() {
     cd "$dir"
 }
 function cd_down_dir() {
-    local dir=$(chose_down_dir)
-    if [[ -z "$dir" ]]; then
+    count=$(ls -l | grep '^d' | wc -l)
+
+    if [[ "$count" == "0" ]]; then
         return 1
+    elif [[ "$count" == "1" ]]; then
+        echo "One"
+    else
+        local dir=$(chose_down_dir)
+        if [[ -z "$dir" ]]; then
+            return 1
+        fi
+        cd "$dir"
     fi
-    cd "$dir"
 }
 function cd_home() {
     cd && clear

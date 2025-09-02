@@ -74,12 +74,12 @@ rofi-wayland
 yazi
 nemo
 telegram-desktop
-# firefox
 vivaldi
 qutebrowser
 obsidian
 inkscape
 zathura
+docker
 
 lsd
 zsh
