@@ -1,0 +1,127 @@
+################
+### MONITORS ###
+################
+
+#==>Insert:[modules.hyprland.monitors]
+
+#################
+### AUTOSTART ###
+#################
+
+#==>Insert:[modules.hyprland.autostart]
+
+#############################
+### ENVIRONMENT VARIABLES ###
+#############################
+
+#==>Insert:[modules.hyprland.env]
+
+#####################
+### LOOK AND FEEL ###
+#####################
+
+source = %%VARS.PATHS.CONFIG%%/hypr/colors.conf
+
+general {
+    gaps_in = %%VARS.hyprland.gaps.in%%
+    gaps_out = %%VARS.hyprland.gaps.out%%
+
+    border_size = %%VARS.hyprland.border.size%%
+
+    col.active_border = rgba($mauveAlphaff) rgba($lavenderAlphaff) 45deg
+    col.inactive_border = rgba($surface1Alphaff)
+
+    resize_on_border = %%VARS.hyprland.resize-on-border%%
+
+    allow_tearing = false
+
+    layout = dwindle
+}
+
+decoration {
+    rounding = %%VARS.hyprland.border.rounding%%
+    rounding_power = %%VARS.hyprland.border.rounding-power%%
+
+    active_opacity = %%VARS.hyprland.opacity.active%%
+    inactive_opacity = %%VARS.hyprland.opacity.inactive%%
+    fullscreen_opacity = %%VARS.hyprland.opacity.fullscreen%%
+
+    blur {
+        enabled = %%VARS.hyprland.blur.enabled%%
+        size = %%VARS.hyprland.blur.size%%
+        passes = %%VARS.hyprland.blur.passes%%
+
+        new_optimizations = true
+        ignore_opacity = true
+        
+        xray = false
+        popups = true
+        vibrancy = 0.1696
+    }
+    shadow {
+        enabled = %%VARS.hyprland.shadow.enabled%%
+        range = %%VARS.hyprland.shadow.range%%
+        render_power = %%VARS.hyprland.shadow.render-power%%
+        color = rgba(%%hyprland.style.shadow.color%%%%VARS.hyprland.shadow.opacity%%)
+    }
+}
+
+animations {
+    enabled = false
+}
+
+dwindle {
+    pseudotile = true
+    preserve_split = true
+}
+
+master {
+    new_status = master
+}
+
+misc {
+    force_default_wallpaper = 0
+    disable_hyprland_logo = true
+    focus_on_activate = false
+}
+
+
+#############
+### INPUT ###
+#############
+
+input {
+    kb_layout = us,ru
+    kb_variant =,
+    kb_model =
+    kb_options = grp:win_space_toggle
+    kb_rules = evdev
+
+    follow_mouse = 1
+
+    sensitivity = 0
+
+    touchpad {
+        natural_scroll = true
+        disable_while_typing = true
+    }
+}
+
+gestures {
+}
+
+device {
+    name = epic-mouse-v1
+    sensitivity = 0
+}
+
+
+##############
+### SOURCE ###
+##############
+
+
+source = %%VARS.PATHS.CONFIG%%/hypr/programs.conf
+source = %%VARS.PATHS.CONFIG%%/hypr/keymappings.conf
+source = %%VARS.PATHS.CONFIG%%/hypr/windowrules.conf
+source = %%VARS.PATHS.CONFIG%%/hypr/layerrules.conf

@@ -1,0 +1,121 @@
+{
+    "modules": {
+        "hyprland": {
+            "monitors": {
+                "content": {
+                    "blocks": {
+                        "type": "monitorv2",
+                        "default": {
+                            "output": "",
+                            "mode": "preferred",
+                            "position": "auto",
+                            "scale": "%%VARS.hyprland.main-scaling%%"
+                        },
+                        "add": []
+                    }
+                }
+            },
+            "autostart": {
+                "content": [
+                    [
+                        "waybar",
+                        "-c",
+                        "%%VARS.PATHS.waybar_config"
+                    ],
+                    [
+                        "hyprpaper"
+                    ],
+                    [
+                        "eww",
+                        "daemon"
+                    ],
+                    [
+                        "wl-paste",
+                        "--type text",
+                        "--watch",
+                        "cliphist",
+                        "store"
+                    ],
+                    [
+                        "wl-paste",
+                        "--type image",
+                        "--watch",
+                        "cliphist",
+                        "store"
+                    ],
+                    [
+                        "%%VARS.PATHS.SCRIPTS%%/battery_allert.sh"
+                    ],
+                    [
+                        "hypridle"
+                    ]
+                ]
+            },
+            "env": {
+                "content": {
+                    "XCURSOR_SIZE": "%%VARS.hyprland.cursor-size%%",
+                    "HYPRCURSOR_SIZE": "%%VARS.hyprland.cursor-size%%",
+                    "XCURSOR_THEME": "%%VARS.hyprland.cursors%%",
+                    "HYPRCURSOR_THEME": "%%VARS.hyprland.cursors%%",
+                    "QT_QPA_PLATFORM": "wayland",
+                    "QT_QPA_PLATFORMTHEME": "qt6ct",
+                    "QT_AUTO_SCREEN_SCALE_FACTOR": "%%VARS.hyprland.main-scaling%%",
+                    "GTK_THEME": "%%VARS.hyprland.gtk-theme%%",
+                    "GTK_ICON_THEME": "%%VARS.hyprland.gtk-icon-theme%%",
+                    "XDG_DATA_DIRS": "/usr/share:/usr/local/share:$HOME/.local/share:$HOME/.icons",
+                    "XDG_CURRENT_DESKTOP": "Hyprland"
+                }
+            },
+            "keymappings": {},
+            "windowrules": {},
+            "layerrules": {},
+            "hypridle": {
+                "general": {},
+                "listeners": []
+            },
+            "hyprpaper": {
+                "params": {
+                    "ipc": true,
+                    "preload": "%%VARS.PATHS.WALLPAPER%%",
+                    "wallpaper": [
+                        "",
+                        "%%VARS.PATHS.WALLPAPER%%"
+                    ]
+                }
+            }
+        },
+        "waybar": {}
+    },
+    "VARS": {
+        "PATHS": {
+            "WALLPAPER": "~/.wallpaper",
+            "CONFIG": "~/.config",
+            "SCRIPTS": "~/.scripts"
+        },
+        "PROGRAMS": {
+            "terminal": "kitty"
+        },
+        "COLORS": {
+            "accent": "#ff0000"
+        },
+        "hyprland": {
+            "main-scaling": "1.00",
+            "cursor-size": 24,
+            "cursors": "Colloid-Cursors",
+            "gtk-theme": "Catppuccin-Mocha-Standart-Lavender-Dark",
+            "gtk-icon-theme": "Papirus-Dark",
+            "gaps": {
+                "in": 3,
+                "out": 8
+            },
+            "border": {
+                "size": 2,
+                "rounding": 10,
+                "rounding-power": 2
+            }
+        },
+        "waybar": {
+            "waybar-config": "%%VARS.PATHS.CONFIG%%/waybar/config.jsonc"
+        }
+    }
+}

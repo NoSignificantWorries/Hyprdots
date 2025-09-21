@@ -1,0 +1,40 @@
+###################
+### MY PROGRAMS ###
+###################
+
+
+# terminal emulators
+$terminal = kitty
+
+# file managers
+$fileManager_gui = nemo
+$fileManager_tui = $terminal -e yazi
+
+# menus
+$menu = ~/.config/rofi/menu/launch.sh
+
+# editors
+$main_editor = code --ozone-platform=wayland
+$add_editor = $terminal -e nvim
+
+$search = brave --ozone-platform=wayland --enable-features=UseOzonePlatform --use-cmd-decoder=validating --use-gl=desktop
+
+# messeging
+$messenger = Telegram
+
+# colorpicker
+$colorpicker = ~/.scripts/colorpicker.sh
+
+# screen recorder
+$screen_rec = ~/.scripts/screen_rec.sh
+
+$full_pts = $screen_rec full
+$area_pts = $screen_rec area
+
+$full_pts_to_file = $screen_rec save-full
+$area_pts_to_file = $screen_rec save-area
+
+$full_rec_start = $screen_rec record-full-start
+$area_rec_start = $screen_rec record-area-start
+$rec_stop = $screen_rec record-stop
+
