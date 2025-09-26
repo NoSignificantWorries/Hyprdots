@@ -4,7 +4,7 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=GitHub
-Exec=/usr/bin/qutebrowser --restore my-github
+Exec=/usr/bin/qutebrowser --target window "https://github.com"
 Icon=/usr/share/icons/desktop/github-icon.svg
 StartupWMClass=github
 

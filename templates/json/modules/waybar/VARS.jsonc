@@ -1,5 +1,0 @@
-{
-    "waybar": {
-        "waybar-config": "%%VARS.PATHS.CONFIG%%/waybar/config.jsonc"
-    }
-}

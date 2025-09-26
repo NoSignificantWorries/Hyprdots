@@ -1,0 +1,41 @@
+@use "/home/dmitry/.config/eww/colors/catppuccin-mocha.scss" as colors;
+
+* {
+    all: unset;
+    font-family: "JetBrains Mono";
+}
+
+@mixin group-style($lmarg: 0px, $rmarg: 0px) {
+    background: rgba(colors.$base, 0.8);
+    margin: 5px $rmarg 5px $lmarg;
+    border: 2px solid rgba(colors.$lavender, 0.8);
+    border-radius: 10px;
+}
+
+.reserver {
+    background: transparent;
+}
+
+.applications-window {
+    background: rgba(colors.$base, 0.3);
+    border: 2px solid rgba(colors.$lavender, 0.8);
+    padding: 6px;
+    border-radius: 10px;
+
+    .add-apps {
+        padding-top: 6px;
+    }
+
+    .app-btn {
+        background-size: 32px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .app-btn:hover {
+        background-size: 40px;
+        animation: gradient_f 20s ease-in infinite;
+        transition: all 0.4s cubic-bezier(.55,0.0,.28,1.682);
+    }
+
+}
+

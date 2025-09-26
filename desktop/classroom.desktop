@@ -4,7 +4,7 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=Classroom
-Exec=/usr/bin/qutebrowser --restore classroom
+Exec=/usr/bin/qutebrowser --target window "https://classroom.google.com"
 Icon=/usr/share/icons/desktop/google-classroom-icon.svg
-
+StartupWMClass=classroom
 
