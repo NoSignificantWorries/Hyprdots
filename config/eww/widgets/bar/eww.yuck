@@ -61,6 +61,51 @@
     )
 )
 
+(defwidget workspaces []
+    (box
+        :class "workspaces"
+    )
+)
+
+(defwidget my-systray []
+    (box
+        :class "systray"
+        (systray)
+    )
+)
+
+(defwindow workspaces-window
+    :monitor 0
+    :hexpand false
+    :vexpand false
+    :windowtype "dock"
+    :namespace "bar"
+    :stacking "fg"
+    :geometry (geometry
+        :anchor "top left"
+        :x "0%"
+        :y "-55px"
+        :width 300
+        :height 55)
+    (workspaces)
+)
+
+(defwindow systray-window
+    :monitor 0
+    :hexpand false
+    :vexpand false
+    :windowtype "dock"
+    :namespace "bar"
+    :stacking "fg"
+    :geometry (geometry
+        :anchor "top left"
+        :x "310px"
+        :y "-55px"
+        :width 300
+        :height 55)
+    (my-systray)
+)
+
 (defwindow applications-window
     :monitor 0
     :hexpand false
@@ -71,7 +116,9 @@
     :geometry (geometry
         :anchor "top center"
         :x "0%"
-        :y "-55px")
+        :y "-55px"
+        :width 300
+        :height 55)
     (box
         :orientation "v"
         (applications)

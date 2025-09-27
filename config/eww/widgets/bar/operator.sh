@@ -6,7 +6,7 @@ eww daemon 2>/dev/null
 
 case "$1" in
     "launch-all")
-        eww --force-wayland open-many -c "$config" reserver applications-window
+        eww --force-wayland open-many -c "$config" reserver workspaces-window systray-window applications-window
         ;;
     "stop-all")
         eww --force-wayland close-all -c "$config"
