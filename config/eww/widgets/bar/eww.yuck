@@ -11,7 +11,7 @@
     (box
         :class "main-apps"
         :orientation "h" :spacing {apps-spacing} :space-evenly false :hexpand false :vexpand false :halign "center" :valign "center"
-        (app-button :icon-path "/home/dmitry/.icons/desktop/deepseek-logo-icon.svg" :command "notify-send 'Test' 'AAA'")
+        (app-button :icon-path "/home/dmitry/Downloads/yarn.svg" :command "notify-send 'Test' 'AAA'")
         (app-button :icon-path "/home/dmitry/.icons/desktop/deepseek-logo-icon.svg" :command "notify-send 'Test' 'AAA'")
         (app-button :icon-path "/home/dmitry/.icons/desktop/deepseek-logo-icon.svg" :command "notify-send 'Test' 'AAA'")
         (app-button :icon-path "/home/dmitry/.icons/desktop/deepseek-logo-icon.svg" :command "notify-send 'Test' 'AAA'")
