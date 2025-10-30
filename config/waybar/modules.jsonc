@@ -1,15 +1,10 @@
 {
     "hyprland/workspaces": {
         "on-click": "activate",  
-        "format": "{icon}",
-        "format-icons": {
-            "active": " ",
-            "default": " ",
-            "empty": " "
-        },
+        "format": "{name}",
         "show-special": true,
         "persistent-workspaces": {
-            "*": 10,  
+            "*": 5,
         },
     },
 
@@ -37,7 +32,7 @@
 
     "tray": {
         "icon-size": 20,
-        "spacing": 2,
+        "spacing": 5,
     },
 
     "user": {
@@ -112,7 +107,7 @@
     },
 
     "network": {
-        "format": "󰤭",
+        "format": "󰤮",
         "format-wifi": "{icon}({signalStrength}%) {essid}",
         "format-icons": [ "󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 " ],
         "format-disconnected": "󰤫 Disconnected",
@@ -180,7 +175,7 @@
         "tooltip": false,
         "thermal-zone": 4,
         "critical-threshold": 80,
-        "format": "{icon} {temperatureC}󰔄",
+        "format": "{icon} {temperatureC}󰔄 ",
         "format-icons": [ "", "", "", "", "" ],
     },
 

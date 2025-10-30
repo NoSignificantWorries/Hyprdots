@@ -1,22 +1,25 @@
 #!/bin/sh
 
-CONFIG_DIR="$HOME/.config/waybar"
+BASE_DIR="$HOME/Hyprdots/config/waybar/"
+CONFIG_DIR="$HOME/.config/waybar/"
 
-CONFIG_SYMLINK="$CONFIG_DIR/config.jsonc"
-STYLE_SYMLINK="$CONFIG_DIR/style.css"
-
-CONFIG_1="$CONFIG_DIR/main/config_main.jsonc"
-STYLE_1="$CONFIG_DIR/main/style_main.css"
-
-if [[ ! -L "${CONFIG_SYMLINK}" ]]; then
-    ln -s "${CONFIG_1}" "${CONFIG_SYMLINK}"
+if [ ! -d "$BASE_DIR" ]; then
+  echo "Ошибка: Папка $BASE_DIR не существует"
+  exit 1
 fi
 
-if [[ ! -L "${STYLE_SYMLINK}" ]]; then
-    ln -s "${STYLE_1}" "${STYLE_SYMLINK}"
-fi
+mkdir -p "$CONFIG_DIR"
 
-killall waybar
-waybar -c "${CONFIG_SYMLINK}" &
+for file in "$BASE_DIR"*; do
+  if [ -f "$file" ] && [ ! -d "$file" ]; then
+    filename=$(basename "$file")
+    ln -sf "$file" "$CONFIG_DIR/$filename"
+    echo "Created symlink: $CONFIG_DIR/$filename"
+  fi
+done
 
+# Перезапускаем waybar
+killall waybar 2>/dev/null
+sleep 1
+waybar -c "${CONFIG_DIR}/config.jsonc" &
 

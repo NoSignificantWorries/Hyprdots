@@ -1,84 +1,87 @@
 /* statistics */
 #cpu {
-    color: @sapphire;
+  padding-right: 14px;
+  color: @sapphire;
 }
 
 #cpu.low {
-    color: @rosewater;
+  color: @rosewater;
 }
 
 #cpu.lower-medium {
-    color: @yellow;
+  color: @yellow;
 }
 
 #cpu.medium {
-    color: @peach;
+  color: @peach;
 }
 
 #cpu.upper-medium {
-    color: @maroon;
+  color: @maroon;
 }
 
 #cpu.high {
-    color: @red;
+  color: @red;
 }
 
 
 #memory {
-    color: @sapphire;
+  padding-right: 14px;
+  color: @sapphire;
 }
 
 #memory.low {
-    color: @rosewater;
+  color: @rosewater;
 }
 
 #memory.lower-medium {
-    color: @yellow;
+  color: @yellow;
 }
 
 #memory.medium {
-    color: @peach;
+  color: @peach;
 }
 
 #memory.upper-medium {
-    color: @maroon;
+  color: @maroon;
 }
 
 #memory.high {
-    color: @red;
+  color: @red;
 }
 
 
 #disk {
-    color: @sapphire;
+  padding-right: 14px;
+  color: @sapphire;
 }
 
 #disk.low {
-    color: @rosewater;
+  color: @rosewater;
 }
 
 #disk.lower-medium {
-    color: @yellow;
+  color: @yellow;
 }
 
 #disk.medium {
-    color: @peach;
+  color: @peach;
 }
 
 #disk.upper-medium {
-    color: @maroon;
+  color: @maroon;
 }
 
 #disk.high {
-    color: @red;
+  color: @red;
 }
 
 
 #temperature {
-    color: @green;
+  color: @green;
 }
 
 #temperature.critical {
-    color: @red;
+  color: @red;
 }
 
