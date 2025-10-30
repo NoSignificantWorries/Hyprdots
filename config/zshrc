@@ -149,3 +149,8 @@ source "$HOME/zsh-bindings"
 [[ -f /home/dmitry/.dart-cli-completion/zsh-config.zsh ]] && . /home/dmitry/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+
+source "$HOME/.zsh-aliases"
+
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
