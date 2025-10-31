@@ -31,7 +31,7 @@ window.top_bar .modules-center {
 #language {
   background-color: alpha(@base, 0.6);
   border: solid alpha(@sky, 0.7) 1px;
-  border-radius: 5px;
+  border-radius: 6px;
   margin-top: 5px;
 
   padding-left: 8px;
@@ -45,7 +45,7 @@ window.top_bar .modules-center {
 #clock.time {
   background-color: alpha(@base, 0.6);
   border: solid alpha(@green, 0.7) 1px;
-  border-radius: 5px;
+  border-radius: 6px;
   margin-top: 5px;
 
   padding-left: 8px;
@@ -60,7 +60,7 @@ window.top_bar .modules-center {
 #workspaces {
   background-color: alpha(@base, 0.6);
   border: solid alpha(@blue, 0.7) 1px;
-  border-radius: 5px;
+  border-radius: 6px;
   margin-top: 5px;
   padding-left: 5px;
   padding-right: 5px;
@@ -88,7 +88,7 @@ window.top_bar .modules-center {
 #tray {
   background-color: alpha(@base, 0.6);
   border: solid alpha(@lavender, 0.5) 1px;
-  border-radius: 5px;
+  border-radius: 6px;
   margin-top: 5px;
   margin-right: 8px;
 
@@ -100,7 +100,7 @@ window.top_bar .modules-center {
 #pulseaudio {
   background-color: alpha(@base, 0.6);
   border: solid alpha(@sapphire, 0.7) 1px;
-  border-radius: 5px;
+  border-radius: 6px;
   margin-top: 5px;
 
   margin-right: 8px;
@@ -143,8 +143,9 @@ window.top_bar .modules-center {
 
 #backlight {
   background-color: alpha(@base, 0.6);
-  border: solid alpha(@peach, 0.7) 1px;
-  border-radius: 5px 0px 0px 5px;
+  border: solid alpha(@overlay0, 0.7) 1px;
+  border-radius: 6px 0px 0px 6px;
+  border-right: none;
   margin-top: 5px;
 
   padding-left: 8px;
@@ -154,31 +155,35 @@ window.top_bar .modules-center {
 }
 
 #backlight.low {
+  border-color: alpha(@overlay1, 0.7);
   color: @overlay1;
 }
 
 #backlight.lower-medium {
+  border-color: alpha(@overlay2, 0.7);
   color: @overlay2;
 }
 
 #backlight.medium {
+  border-color: alpha(@subtext0, 0.7);
   color: @subtext0;
 }
 
 #backlight.upper-medium {
+  border-color: alpha(@subtext1, 0.7);
   color: @subtext1;
 }
 
 #backlight.high {
+  border-color: alpha(@text, 0.7);
   color: @text;
 }
 
 
 #battery {
   background-color: alpha(@base, 0.6);
-  border: solid alpha(@peach, 0.7) 1px;
-  border-left: none;
-  border-radius: 0px 5px 5px 0px;
+  border: solid alpha(@teal, 0.7) 1px;
+  border-radius: 0px 6px 6px 0px;
   margin-top: 5px;
 
   margin-right: 8px;
@@ -190,22 +195,27 @@ window.top_bar .modules-center {
 }
 
 #battery.low {
+  border-color: alpha(@red, 0.7);
   color: @red;
 }
 
 #battery.lower-medium {
+  border-color: alpha(@maroon, 0.7);
   color: @maroon;
 }
 
 #battery.medium {
+  border-color: alpha(@peach, 0.7);
   color: @peach;
 }
 
 #battery.upper-medium {
+  border-color: alpha(@flamingo, 0.7);
   color: @flamingo;
 }
 
 #battery.high {
+  border-color: alpha(@rosewater, 0.7);
   color: @rosewater;
 }
 
@@ -213,7 +223,8 @@ window.top_bar .modules-center {
 #bluetooth {
   background-color: alpha(@base, 0.6);
   border: solid alpha(@teal, 0.7) 1px;
-  border-radius: 5px 0px 0px 5px;
+  border-right: none;
+  border-radius: 6px 0px 0px 6px;
   margin-top: 5px;
 
   padding-left: 14px;
@@ -221,14 +232,17 @@ window.top_bar .modules-center {
 }
 
 #bluetooth.disabled {
+  border-color: alpha(@subtext0, 0.7);
   color: @subtext0;
 }
 
 #bluetooth.on {
+  border-color: alpha(@blue, 0.7);
   color: @blue;
 }
 
 #bluetooth.connected {
+  border-color: alpha(@sapphire, 0.7);
   color: @sapphire;
 }
 
@@ -236,7 +250,6 @@ window.top_bar .modules-center {
 #network {
   background-color: alpha(@base, 0.6);
   border: solid alpha(@green, 0.7) 1px;
-  border-left: none;
   border-radius: 0px 5px 5px 0px;
   margin-top: 5px;
 
@@ -245,14 +258,17 @@ window.top_bar .modules-center {
 }
 
 #network.disabled {
+  border-color: alpha(@subtext0, 0.7);
   color: @subtext0;
 }
 
 #network.disconnected {
+  border-color: alpha(@red, 0.7);
   color: @red;
 }
 
 #network.wifi {
+  border-color: alpha(@teal, 0.7);
   color: @teal;
 }
 

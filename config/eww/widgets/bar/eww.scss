@@ -8,8 +8,8 @@
 @mixin group-style($lmarg: 0px, $rmarg: 0px) {
     background: rgba(colors.$base, 0.8);
     margin: 5px $rmarg 5px $lmarg;
-    border: 2px solid rgba(colors.$lavender, 0.8);
-    border-radius: 10px;
+    border: 1px solid rgba(colors.$lavender, 0.8);
+    border-radius: 6px;
 }
 
 .reserver {
@@ -67,9 +67,9 @@
 
 .applications-window {
     background: rgba(colors.$base, 0.3);
-    border: 2px solid rgba(colors.$lavender, 0.8);
+    border: 1px solid rgba(colors.$lavender, 0.8);
     padding: 6px;
-    border-radius: 10px;
+    border-radius: 6px;
 
     .add-apps {
         padding-top: 6px;
