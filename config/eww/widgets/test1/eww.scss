@@ -1,0 +1,17 @@
+@use "/home/dmitry/.config/eww/colors/catppuccin-mocha.scss" as colors;
+
+* {
+    all: unset;
+    font-family: "JetBrains Mono";
+}
+
+.test1-window {
+    background-color: transparent;
+    
+    .btn {
+        
+        background-size: 32px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}

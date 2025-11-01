@@ -1,0 +1,90 @@
+@use "/home/dmitry/.config/eww/colors/catppuccin-mocha.scss" as colors;
+
+* {
+    all: unset;
+    font-family: "JetBrains Mono";
+}
+
+@mixin group-style($lmarg: 0px, $rmarg: 0px) {
+    background: rgba(colors.$base, 0.8);
+    margin: 5px $rmarg 5px $lmarg;
+    border: 1px solid rgba(colors.$lavender, 0.8);
+    border-radius: 6px;
+}
+
+.reserver {
+    background: transparent;
+}
+
+.workspaces-window {
+    background: rgba(colors.$base, 0.3);
+    border: 2px solid rgba(colors.$lavender, 0.8);
+    border-radius: 10px;
+    
+    .workspaces {
+    }
+    
+}
+
+.systray-window {
+    background: rgba(colors.$base, 0.3);
+    border: 2px solid rgba(colors.$lavender, 0.8);
+    border-radius: 10px;
+
+    menu {
+        background: colors.$base;
+        color: colors.$text;
+        padding: 5px;
+        border-radius: 10px;
+
+        menuitem {
+            border-radius: 5px;
+            padding: 8px 12px;
+            background-color: transparent;
+            transition: all .2s ease;
+
+            &:backdrop {
+                background-color: colors.$mantle;
+            }
+        }
+
+        menuitem arrow {
+            min-width: 16px;
+            min-height: 16px;
+
+            &:dir(ltr) {
+                -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+                margin-left: 10px;
+                margin-right: 0;
+            }
+        }
+
+        menuitem:hover {
+            background-color: colors.$blue;
+        }
+    }
+}
+
+.applications-window {
+    background: rgba(colors.$base, 0.3);
+    border: 1px solid rgba(colors.$lavender, 0.8);
+    padding: 6px;
+    border-radius: 6px;
+
+    .add-apps {
+        padding-top: 6px;
+    }
+
+    .app-btn {
+        background-size: 32px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .app-btn:hover {
+        background-size: 40px;
+        animation: gradient_f 20s ease-in infinite;
+        transition: all 0.4s cubic-bezier(.55,0.0,.28,1.682);
+    }
+
+}
+

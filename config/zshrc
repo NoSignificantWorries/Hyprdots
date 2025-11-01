@@ -140,8 +140,8 @@ export FZF_DEFAULT_OPTS=" \
 --color=selected-bg:#45475A \
 --color=border:#6C7086,label:#CDD6F4"
 
-source "$HOME/zsh-functions"
-source "$HOME/zsh-bindings"
+source "$HOME/.zsh/zsh-functions"
+source "$HOME/.zsh/zsh-bindings"
 
 
 ## [Completion]
@@ -150,7 +150,7 @@ source "$HOME/zsh-bindings"
 ## [/Completion]
 
 
-source "$HOME/.zsh-aliases"
+source "$HOME/.zsh/zsh-aliases"
 
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
