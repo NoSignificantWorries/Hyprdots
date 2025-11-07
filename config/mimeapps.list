@@ -1,6 +1,6 @@
 [Default Applications]
 text/plain=nvim.desktop
-application/pdf=zathura.desktop
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
 x-scheme-handler/http=zen.desktop
 x-scheme-handler/https=zen.desktop
 text/x-script.python=code.desktop
@@ -16,10 +16,12 @@ application/xhtml+xml=zen.desktop
 application/x-extension-xhtml=zen.desktop
 application/x-extension-xht=zen.desktop
 x-scheme-handler/anytype=anytype.desktop
+inode/directory=org.geeqie.Geeqie.desktop
+image/png=org.geeqie.Geeqie.desktop
 
 [Added Associations]
 text/plain=nvim.desktop;
-application/pdf=zathura.desktop;
+application/pdf=zathura.desktop;org.pwmt.zathura-pdf-mupdf.desktop;
 x-scheme-handler/http=zen.desktop;firefox.desktop;
 x-scheme-handler/https=zen.desktop;firefox.desktop;
 text/x-script.python=code.desktop
@@ -31,3 +33,5 @@ application/x-extension-shtml=zen.desktop;
 application/xhtml+xml=zen.desktop;
 application/x-extension-xhtml=zen.desktop;
 application/x-extension-xht=zen.desktop;
+inode/directory=org.geeqie.Geeqie.desktop;
+image/png=org.geeqie.Geeqie.desktop;
