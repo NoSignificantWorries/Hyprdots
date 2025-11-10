@@ -1,8 +1,0 @@
-PACKAGES = {
-    "system": [
-
-    ],
-    "user": [
-        
-    ]
-}

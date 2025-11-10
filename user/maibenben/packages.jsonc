@@ -1,0 +1,204 @@
+{
+  "base-installer": "sudo pacman -S",
+  "base-flags": ["--noconfirm"],
+  "main-installer": "paru -S",
+  "main-flags": ["--noconfirm"],
+  "update": "sudo pacman -Suuy",
+  "pre-install": [
+    {
+      "label": "Base  utils",
+      "desc": "Installing base building and installation utilities.",
+      "install": ["git", "curl", "wget", "base-devel", "unzip", "tar", "7zip"],
+    },
+  ],
+  "install-base": {
+    "sys": [
+      {
+        "label": "Hyprland",
+        "desc": "Installing base utils for hyprland wayland system.",
+        "install": [
+          "mesa",
+          "kitty",
+          "rofi",
+          "hyprland",
+          "hyprpaper",
+          "hyprlock",
+          "hyprpicker",
+          "hypridle",
+          "dunst",
+          "wl-clipboard",
+          "cliphist",
+        ],
+        "commands": ["sudo usermod -aG input,fprint $USER"],
+      },
+      {
+        "label": "Sound",
+        "install": [
+          "pipewire",
+          "pipewire-alsa",
+          "pipewire-pulse",
+          "pipewire-jack",
+          "wireplumber",
+        ],
+      },
+      {
+        "label": "QT&GTK Support",
+        "install": [
+          "qt5-wayland",
+          "qt6-wayland",
+          "qt6-svg",
+          "qt6-declarative",
+          "qt5-quickcontrols2",
+          "gtk3",
+          "gtk4",
+          "xdg-desktop-portal",
+          "xdg-desktop-portal-gtk",
+        ],
+      },
+      {
+        "label": "SDDM",
+        "install": "sddm",
+        "commands": [
+          "sudo systemctl enable sddm.service",
+          "sudo systemctl start sddm.service",
+        ],
+      },
+      {
+        "label": "AUR engine",
+        "commands": [
+          "git clone https://aur.archlinux.org/paru.git /tmp/paru",
+          "cd /tmp/paru && makepkg -si --noconfirm",
+          "rm -rf /tmp/paru",
+        ],
+      },
+    ],
+  },
+  "install-main": {
+    "sys": [
+      {
+        "label": "Fonts",
+        "install": [
+          "fontconfig",
+          "ttf-jetbrains-mono",
+          "woff2-font-awesome",
+          "noto-fonts-emoji",
+        ],
+      },
+      {
+        "label": "Styling utils",
+        "install": ["qt5ct", "qt6ct", "nwg-look", "kvantum"],
+      },
+      {
+        "label": "SYS utils",
+        "install": ["bluez", "bluez-utils", "brightnessctl", "openssh"],
+      },
+      {
+        "label": "DE elements",
+        "install": ["wlogout", "hyprprop-git"],
+      },
+    ],
+    "user": [
+      {
+        "label": "Shell setup",
+        "install": [
+          "zsh",
+          "oh-my-zsh-git",
+          "zsh-theme-powerlevel10k-git",
+          "zsh-autosuggestions",
+          "zsh-syntax-highlighting",
+        ],
+      },
+      {
+        "label": "Sehll utils",
+        "install": [
+          "neofetch",
+          "nitch",
+          // system dashboards
+          "upower",
+          "nvtop",
+          "bottom",
+          "powertop",
+          "ncdu",
+          // QoL utils
+          "atuin",
+          "yazi",
+          "lsd",
+          "timg",
+          // dev utils
+          "lazygit",
+          // scripts dependencies
+          "bc",
+          "fzf",
+          "fd",
+          "ripgrep",
+          "tumbler",
+          "libnotify",
+          // screenshot
+          "grim",
+          "slurp",
+        ],
+      },
+      {
+        "label": "Icons",
+        "install": ["papirus-icon-theme", "papirus-folders"],
+      },
+      {
+        "label": "Sys Applications",
+        "install": [
+          "imagemagick",
+          "pavucontrol",
+          "mission-center",
+          "network-manager-applet",
+          "blueman",
+        ],
+      },
+      {
+        "label": "DE Applications",
+        "install": ["xed", "mpv", "zathura", "geeqie", "nemo"],
+      },
+      {
+        "label": "Applications",
+        "install": [
+          "zen-browser-bin",
+          "telegram-desktop",
+          "visual-studio-code-bin",
+          "obsidian",
+          "hiddify",
+        ],
+      },
+      {
+        "label": "c/c++",
+        "install": ["gcc", "cmake"],
+      },
+      {
+        "label": "node",
+        "install": ["nodejs", "npm"],
+      },
+      {
+        "label": "python",
+        "install": ["python-pip", "python-pipx", "python-uv", "ruff"],
+      },
+      {
+        "label": "rust",
+        "install": ["rustup", "rust-src"],
+      },
+      {
+        "label": "go",
+        "install": ["go"],
+      },
+      {
+        "label": "js/ts",
+        "install": ["prettier"],
+      },
+      {
+        "label": "Docker",
+        "install": ["docker", "lazydocker"],
+        "commands": [
+          "sudo systemctl enable docker",
+          "sudo systemctl start docker",
+          "sudo usermod -aG docker $USER",
+        ],
+      },
+    ],
+  },
+}
