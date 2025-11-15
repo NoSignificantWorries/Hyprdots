@@ -20,7 +20,7 @@
         "label": "Hyprland",
         "desc": "Installing base utils for hyprland wayland system.",
         "install": [
-          "mesa",
+          "nvidia",
           "kitty",
           "rofi",
           "hyprland",
@@ -93,7 +93,7 @@
       },
       {
         "label": "SYS utils",
-        "install": ["bluez", "bluez-utils", "brightnessctl", "openssh"],
+        "install": ["openssh"],
       },
       {
         "label": "DE elements",
@@ -119,7 +119,6 @@
         "label": "Shell utils",
         "install": [
           // system dashboards
-          "upower",
           "nvtop",
           "bottom",
           "powertop",
