@@ -1,23 +1,34 @@
 [
-    // top bar
-    {
-        "include": ["~/.config/waybar/modules.jsonc"],
-        "name": "top_bar",
-        "layer": "top",
-        "output": ["*"],
-        "position": "top",
-        "mode": "dock",
-        "passthrough": false,
-        "reload_style_on_charge": true,
+  // top bar
+  {
+    "include": ["~/.config/waybar/modules.jsonc"],
+    "name": "top_bar",
+    "layer": "top",
+    "output": ["*"],
+    "position": "top",
+    "mode": "dock",
+    "passthrough": false,
+    "reload_style_on_charge": true,
 
-        "height": 36,
-        "spacing": 0,
-        "margin-left": 8,
-        "margin-right": 8,
+    "height": 36,
+    "spacing": 0,
+    "margin-left": 8,
+    "margin-right": 8,
 
-        "modules-left": ["hyprland/language", "clock#time", "hyprland/workspaces"],
-        "modules-center": ["cpu", "memory", "disk", "temperature"],
-        "modules-right": ["tray", "pulseaudio", "backlight", "battery", "bluetooth",  "network"],
-    }
+    "modules-left": [
+      "hyprland/language",
+      "clock#time",
+      "hyprland/workspaces",
+      "hyprland/submap",
+    ],
+    "modules-center": ["cpu", "memory", "disk", "temperature"],
+    "modules-right": [
+      "tray",
+      "pulseaudio",
+      "backlight",
+      "battery",
+      "bluetooth",
+      "network",
+    ],
+  },
 ]
-

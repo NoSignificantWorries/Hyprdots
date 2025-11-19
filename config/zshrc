@@ -120,7 +120,7 @@ eval "$(atuin init zsh)"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-export LITE_SCALE=1.6
+export PATH=~/.npm-global/bin:$PATH
 
 # Created by `pipx` on 2025-07-20 08:36:55
 export PATH="$PATH:/home/dmitry/.local/bin"

@@ -18,6 +18,7 @@ application/x-extension-xht=zen.desktop
 x-scheme-handler/anytype=anytype.desktop
 inode/directory=org.geeqie.Geeqie.desktop
 image/png=org.geeqie.Geeqie.desktop
+x-scheme-handler/gitkraken=GitKraken.desktop
 
 [Added Associations]
 text/plain=nvim.desktop;
