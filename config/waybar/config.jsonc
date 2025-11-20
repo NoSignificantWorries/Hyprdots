@@ -19,7 +19,6 @@
       "hyprland/language",
       "clock#time",
       "hyprland/workspaces",
-      "niri/workspaces",
       "hyprland/submap",
     ],
     "modules-center": ["cpu", "memory", "disk", "temperature"],
