@@ -10,7 +10,7 @@
     "passthrough": false,
     "reload_style_on_charge": true,
 
-    "height": 36,
+    "height": 48,
     "spacing": 0,
     "margin-left": 8,
     "margin-right": 8,
@@ -19,6 +19,7 @@
       "hyprland/language",
       "clock#time",
       "hyprland/workspaces",
+      "niri/workspaces",
       "hyprland/submap",
     ],
     "modules-center": ["cpu", "memory", "disk", "temperature"],

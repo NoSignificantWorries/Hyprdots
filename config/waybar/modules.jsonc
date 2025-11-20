@@ -8,6 +8,16 @@
     },
   },
 
+  "niri/workspaces": {
+    "all-outputs": true,
+    "disable-click": false,
+    "format": "{icon}",
+    "format-icons": {
+      "active": "󰝥",
+      "default": "󰝦",
+    },
+  },
+
   "hyprland/submap": {},
 
   "wlr/taskbar": {
