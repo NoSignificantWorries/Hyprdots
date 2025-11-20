@@ -11,9 +11,9 @@ window {
 
 button {
     color: @subtext0;
-    background-color: alpha(@base, 0.5);
+    /* background-color: alpha(@base, 0.5); */
+    background-color: @base;
     outline-style: none;
-    border-width: 0px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20%;
