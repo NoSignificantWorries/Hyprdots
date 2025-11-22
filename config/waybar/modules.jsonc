@@ -1,13 +1,4 @@
 {
-  "hyprland/workspaces": {
-    "on-click": "activate",
-    "format": "{name}",
-    "show-special": true,
-    "persistent-workspaces": {
-      "*": 5,
-    },
-  },
-
   "niri/workspaces": {
     "all-outputs": true,
     "disable-click": false,
@@ -18,28 +9,10 @@
     },
   },
 
-  "hyprland/submap": {},
-
-  "wlr/taskbar": {
-    "format": "{icon}",
-    "icon-size": 20,
-    "icon-theme": "Catppuccin-Mocha",
-    "tooltip-format": "{title}",
-    "on-click": "activate",
-    "on-click-right": "close",
-    "on-click-middle": "fullscreen",
-  },
-
-  "hyprland/window": {
-    "format": "{title}",
-    "max-length": 50,
-  },
-
-  "hyprland/language": {
-    "format-en": "EN (US)",
-    "format-ru": "RU",
-    "keyboard-name": "at-translated-set-2-keyboard",
-    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+  "niri/language": {
+    "format": "{}",
+    "format-en": "EN 🇺🇸",
+    "format-ru": "RU 🇷🇺",
   },
 
   "tray": {

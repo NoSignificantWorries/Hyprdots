@@ -15,13 +15,7 @@
     "margin-left": 8,
     "margin-right": 8,
 
-    "modules-left": [
-      "hyprland/language",
-      "clock#time",
-      // "hyprland/workspaces",
-      "niri/workspaces",
-      "hyprland/submap",
-    ],
+    "modules-left": ["niri/language", "clock#time", "niri/workspaces"],
     "modules-center": ["cpu", "memory", "disk", "temperature"],
     "modules-right": [
       "tray",

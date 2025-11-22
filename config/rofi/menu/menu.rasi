@@ -96,7 +96,7 @@ listview {
     
     spacing:                     0px;
     margin:                      0px;
-    padding:                     0px;
+    padding:                     10px;
     border:                      1px solid;
     border-radius:               10px;
     border-color:                @mauve;
