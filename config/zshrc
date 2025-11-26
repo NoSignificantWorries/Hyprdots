@@ -130,9 +130,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init - zsh)"
 
 
-alias vivaldi='vivaldi --ozone-platform=wayland --enable-features=UseOzonePlatform --use-cmd-decoder=validating --use-gl=desktop'
-
-
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1E1E2E,spinner:#94e2d5,hl:#a6e3a1 \
 --color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#cba6f7 \
@@ -149,9 +146,6 @@ source "$HOME/.zsh/zsh-bindings"
 [[ -f /home/dmitry/.dart-cli-completion/zsh-config.zsh ]] && . /home/dmitry/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
-
 source "$HOME/.zsh/zsh-aliases"
 
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="$HOME/.cargo/bin:$PATH"

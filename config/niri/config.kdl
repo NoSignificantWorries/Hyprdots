@@ -94,11 +94,11 @@ environment {
     GTK_ICON_THEME "Papirus-Dark"
     XDG_DATA_DIRS "/usr/share:/usr/local/share:$HOME/.local/share:$HOME/.icons"
 }
+spawn-sh-at-startup "swww-daemon &"
+spawn-sh-at-startup "swww img ~/.wallpaper --transition-type none"
 spawn-at-startup "waybar"
 spawn-at-startup "swaync"
 spawn-sh-at-startup "systemctl --user start opentabletdriver.service"
-spawn-sh-at-startup "swww-daemon &"
-spawn-sh-at-startup "swww img ~/.wallpaper --transition-type wipe"
 hotkey-overlay {
     skip-at-startup
 }
@@ -109,7 +109,6 @@ animations {
 window-rule {
     match app-id="hiddify$"
     match app-id="nemo$"
-    match app-id="org.telegram.desktop$"
     open-floating true
     default-column-width {
         fixed 900

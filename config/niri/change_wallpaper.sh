@@ -4,5 +4,5 @@ WALLPAPER="$HOME/.wallpaper"
 
 ln -sf "$1" "$WALLPAPER"
 
-swww img "$WALLPAPER" --transition-type center
+swww img "$WALLPAPER" --transition-type wipe
 
