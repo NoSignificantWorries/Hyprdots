@@ -55,6 +55,20 @@ $env.config = {
   edit_mode: vi
 }
 
+alias l = ls
+alias la = ls -a
+alias ll = ls -l
+alias lla = ls -al
+alias lsdl = lsd -l
+alias lsda = lsd -a
+alias lsdla = lsd -al
+
+alias gaa = git add .
+alias ga = git add
+alias gc = git commit
+alias gm = git commit -m
+alias gp = git push
+
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 
