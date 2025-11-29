@@ -12,7 +12,7 @@ window {
 button {
     color: @subtext0;
     /* background-color: alpha(@base, 0.5); */
-    background-color: @base;
+    background-color: @mantle;
     outline-style: none;
     background-repeat: no-repeat;
     background-position: center;

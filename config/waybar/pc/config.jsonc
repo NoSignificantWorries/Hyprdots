@@ -1,0 +1,21 @@
+[
+  {
+    "include": ["~/.config/waybar/modules.jsonc"],
+    "name": "top_bar",
+    "layer": "top",
+    "output": ["*"],
+    "position": "top",
+    "mode": "dock",
+    "passthrough": false,
+    "reload_style_on_charge": true,
+
+    "height": 48,
+    "spacing": 0,
+    "margin-left": 8,
+    "margin-right": 8,
+
+    "modules-left": ["niri/language", "clock#time", "niri/workspaces"],
+    "modules-center": ["cpu", "memory", "disk", "temperature"],
+    "modules-right": ["tray", "pulseaudio", "network"],
+  },
+]
