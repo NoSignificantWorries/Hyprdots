@@ -2,10 +2,11 @@
   "niri/workspaces": {
     "all-outputs": true,
     "disable-click": false,
-    "format": "{icon}",
+    "format": "{icon} {value}",
     "format-icons": {
-      "active": "󰝥",
-      "default": "󰝦",
+      "code": "",
+      "QoL": "󱀄",
+      "default": "",
     },
   },
 
