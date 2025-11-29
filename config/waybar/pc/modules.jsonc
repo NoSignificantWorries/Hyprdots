@@ -2,10 +2,11 @@
   "niri/workspaces": {
     "all-outputs": true,
     "disable-click": false,
-    "format": "{icon}",
+    "format": "{icon} {value}",
     "format-icons": {
-      "active": "󰝥",
-      "default": "󰝦",
+      "code": "",
+      "QoL": "󱀄",
+      "default": "",
     },
   },
 
@@ -21,7 +22,7 @@
   },
 
   "user": {
-    "format": " <span color='#8bd5ca'>{user}</span> (up <span color='#f5bde6'>{work_d} d</span> <span color='#8aadf4'>{work_H} h</span> <span color='#eed49f'>{work_M} min</span> <span color='#a6da95'>↑</span>)",
+    "format": " <span color='#8bd5ca'>{user}</span>",
     "icon": true,
   },
 
@@ -116,44 +117,6 @@
       "low": 10,
     },
     "on-click": "kitty -e ncdu ~",
-  },
-
-  "temperature": {
-    "tooltip": false,
-    "thermal-zone": 4,
-    "critical-threshold": 80,
-    "format": "{icon} {temperatureC}󰔄 ",
-    "format-icons": ["", "", "", "", ""],
-  },
-
-  "battery": {
-    "states": {
-      "high": 90,
-      "upper-medium": 70,
-      "medium": 50,
-      "lower-medium": 30,
-      "low": 10,
-    },
-    "format": "{icon} {capacity}%",
-    "format-charging": "󱐋{icon} {capacity}%",
-    "format-plugged": "󰚥{icon} {capacity}%",
-    "format-time": "{H} h {M} min",
-    "format-icons": ["󱃍", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-    "tooltip-format": "{timeTo}",
-  },
-
-  "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": ["󰌶", "󱩎", "󱩏", "󱩐", "󱩑", "󱩒", "󱩓", "󱩔", "󱩕", "󱩖", "󰛨"],
-    "tooltip": false,
-    "on-scroll": null,
-    "states": {
-      "high": 90,
-      "upper-medium": 70,
-      "medium": 50,
-      "lower-medium": 30,
-      "low": 10,
-    },
   },
 
   "pulseaudio": {

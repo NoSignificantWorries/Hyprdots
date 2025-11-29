@@ -1,3 +1,5 @@
+workspace "code"
+workspace "QoL"
 input {
     keyboard {
         xkb {
@@ -79,13 +81,14 @@ layout {
         place-within-column
     }
     insert-hint {
-        gradient from="#74c7ec80" to="#a6e3a180" angle=45 relative-to="workspace-view"
+        color "#000000A0"
     }
+    background-color "transparent"
 }
 environment {
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     XCURSOR_SIZE "24"
-    XCURSOR_THEME "Colloid-Cursors"
+    XCURSOR_THEME "Colloid-Pastel-cursors-dark"
     QT_QPA_PLATFORM "wayland"
     QT_QPA_PLATFORMTHEME "qt6ct"
     QT_AUTO_SCREEN_SCALE_FACTOR "2"
@@ -120,6 +123,32 @@ window-rule {
 window-rule {
     geometry-corner-radius 8
     clip-to-geometry true
+}
+layer-rule {
+    match namespace="^swww-daemon$"
+    place-within-backdrop true
+}
+overview {
+    backdrop-color "transparent"
+    workspace-shadow {
+        off
+    }
+}
+gestures {
+    dnd-edge-view-scroll {
+        trigger-width 30
+        delay-ms 100
+        max-speed 1500
+    }
+    dnd-edge-workspace-switch {
+        trigger-height 50
+        delay-ms 100
+        max-speed 1500
+    }
+    hot-corners {
+ // off
+
+    }
 }
 binds {
     Mod+Shift+Slash {

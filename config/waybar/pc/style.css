@@ -17,9 +17,7 @@ window.top_bar .modules-right {
 }
 
 window.top_bar .modules-center {
-  /* background-color: alpha(@base, 0.6); */
   background-color: @base;
-  /* border: solid alpha(@blue, 0.7) 1px; */
   border: solid @blue 1px;
   border-radius: 5px;
   margin-top: 5px;
@@ -30,25 +28,7 @@ window.top_bar .modules-center {
   font-weight: bold;
 }
 
-#language {
-  /* background-color: alpha(@base, 0.6); */
-  /* border: solid alpha(@sky, 0.7) 1px; */
-  background-color: @base;
-  border: solid @sky 1px;
-  border-radius: 6px;
-  margin-top: 5px;
-
-  padding-left: 8px;
-  padding-right: 8px;
-
-  margin-right: 8px;
-
-  color: @text;
-}
-
-#clock.time {
-  /* background-color: alpha(@base, 0.6); */
-  /* border: solid alpha(@green, 0.7) 1px; */
+#user {
   background-color: @base;
   border: solid @green 1px;
   border-radius: 6px;
@@ -63,11 +43,9 @@ window.top_bar .modules-center {
   color: @green;
 }
 
-#submap {
-  /* background-color: alpha(@mantle, 0.6); */
-  /* border: solid alpha(@mauve, 0.7) 1px; */
-  background-color: @mantle;
-  border: solid @mauve 1px;
+#clock.time {
+  background-color: @base;
+  border: solid @green 1px;
   border-radius: 6px;
   margin-top: 5px;
 
@@ -77,12 +55,10 @@ window.top_bar .modules-center {
   margin-right: 8px;
 
   font-weight: bold;
-  color: @mauve;
+  color: @green;
 }
 
 #workspaces {
-  /* background-color: alpha(@base, 0.6); */
-  /* border: solid alpha(@blue, 0.7) 1px; */
   background-color: @base;
   border: solid @blue 1px;
   border-radius: 6px;
@@ -106,16 +82,15 @@ window.top_bar .modules-center {
 }
 
 #workspaces button.active {
-  color: @green;
-  /* border-bottom: solid alpha(@green, 0.7) 2px; */
-  border-bottom: solid @green 2px;
+  background-color: @teal;
+  color: @base;
   font-weight: bold;
-  padding-bottom: 1px;
+  border-radius: 4px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 #tray {
-  /* background-color: alpha(@base, 0.6); */
-  /* border: solid alpha(@lavender, 0.5) 1px; */
   background-color: @base;
   border: solid @lavender 1px;
   border-radius: 6px;
@@ -128,10 +103,8 @@ window.top_bar .modules-center {
 
 
 #pulseaudio {
-  /* background-color: alpha(@base, 0.6); */
-  /* border: solid alpha(@sapphire, 0.7) 1px; */
   background-color: @base;
-  border: solid @sapphire 1px;
+  border: solid @red 1px;
   border-radius: 6px;
   margin-top: 5px;
 
@@ -145,187 +118,77 @@ window.top_bar .modules-center {
 
 #pulseaudio.low {
   color: @teal;
+  border-color: @teal;
 }
 
 #pulseaudio.lower-medium {
   color: @green;
+  border-color: @green;
 }
 
 #pulseaudio.medium {
   color: @yellow;
+  border-color: @yellow;
 }
 
 #pulseaudio.upper-medium {
   color: @peach;
+  border-color: @peach;
 }
 
 #pulseaudio.high {
   color: @maroon;
+  border-color: @maroon;
 }
 
 #pulseaudio.bluetooth {
   color: @sapphire;
+  border-color: @sapphire;
 }
 
 #pulseaudio.muted {
   color: @surface2;
-}
-
-
-
-#backlight {
-  /* background-color: alpha(@base, 0.6); */
-  /* border: solid alpha(@overlay0, 0.7) 1px; */
-  background-color: @base;
-  border: solid @overlay0 1px;
-  border-radius: 6px 0px 0px 6px;
-  border-right: none;
-  margin-top: 5px;
-
-  padding-left: 8px;
-  padding-right: 8px;
-
-  color: @overlay0;
-}
-
-#backlight.low {
-  /* border-color: alpha(@overlay1, 0.7); */
-  border-color: @overlay1;
-  color: @overlay1;
-}
-
-#backlight.lower-medium {
-  /* border-color: alpha(@overlay2, 0.7); */
-  border-color: @overlay2;
-  color: @overlay2;
-}
-
-#backlight.medium {
-  /* border-color: alpha(@subtext0, 0.7); */
-  border-color: @subtext0;
-  color: @subtext0;
-}
-
-#backlight.upper-medium {
-  /* border-color: alpha(@subtext1, 0.7); */
-  border-color: @subtext1;
-  color: @subtext1;
-}
-
-#backlight.high {
-  /* border-color: alpha(@text, 0.7); */
-  border-color: @text;
-  color: @text;
-}
-
-
-#battery {
-  /* background-color: alpha(@base, 0.6); */
-  /* border: solid alpha(@teal, 0.7) 1px; */
-  background-color: @base;
-  border: solid @teal 1px;
-  border-radius: 0px 6px 6px 0px;
-  margin-top: 5px;
-
-  margin-right: 8px;
-
-  padding-left: 8px;
-  padding-right: 8px;
-
-  color: @teal;
-}
-
-#battery.low {
-  /* border-color: alpha(@red, 0.7); */
-  border-color: @red;
-  color: @red;
-}
-
-#battery.lower-medium {
-  /* border-color: alpha(@maroon, 0.7); */
-  border-color: @maroon;
-  color: @maroon;
-}
-
-#battery.medium {
-  /* border-color: alpha(@peach, 0.7); */
-  border-color: @peach;
-  color: @peach;
-}
-
-#battery.upper-medium {
-  /* border-color: alpha(@flamingo, 0.7); */
-  border-color: @flamingo;
-  color: @flamingo;
-}
-
-#battery.high {
-  /* border-color: alpha(@rosewater, 0.7); */
-  border-color: @rosewater;
-  color: @rosewater;
-}
-
-
-#bluetooth {
-  /* background-color: alpha(@base, 0.6); */
-  /* border: solid alpha(@teal, 0.7) 1px; */
-  background-color: @base;
-  border: solid @teal 1px;
-  border-right: none;
-  border-radius: 6px 0px 0px 6px;
-  margin-top: 5px;
-
-  padding-left: 14px;
-  padding-right: 14px;
-}
-
-#bluetooth.disabled {
-  /* border-color: alpha(@subtext0, 0.7); */
-  border-color: @subtext0;
-  color: @subtext0;
-}
-
-#bluetooth.on {
-  /* border-color: alpha(@blue, 0.7); */
-  border-color: @blue;
-  color: @blue;
-}
-
-#bluetooth.connected {
-  /* border-color: alpha(@sapphire, 0.7); */
-  border-color: @sapphire;
-  color: @sapphire;
+  border-color: @surface2;
 }
 
 
 #network {
-  /* background-color: alpha(@base, 0.6); */
-  /* border: solid alpha(@green, 0.7) 1px; */
   background-color: @base;
   border: solid @green 1px;
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 5px;
   margin-top: 5px;
 
   padding-left: 8px;
   padding-right: 8px;
+
+  margin-right: 8px;
 }
 
 #network.disabled {
-  /* border-color: alpha(@subtext0, 0.7); */
   border-color: @subtext0;
   color: @subtext0;
 }
 
 #network.disconnected {
-  /* border-color: alpha(@red, 0.7); */
   border-color: @red;
   color: @red;
 }
 
 #network.wifi {
-  /* border-color: alpha(@teal, 0.7); */
   border-color: @teal;
   color: @teal;
+}
+
+#language {
+  background-color: @base;
+  border: solid @sky 1px;
+  border-radius: 6px;
+  margin-top: 5px;
+
+  padding-left: 8px;
+  padding-right: 8px;
+
+  color: @text;
 }
 
 
