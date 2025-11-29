@@ -4,8 +4,9 @@ provider = "main"
 [Fonts]
 install = [
   "fontconfig",
-  "ttf-jetbrains-mono",
+  "ttf-jetbrains-mono-nerd",
   "woff2-font-awesome",
+  "woff2-fira-code",
   "noto-fonts-emoji",
 ]
 

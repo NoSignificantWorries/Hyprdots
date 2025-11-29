@@ -6,7 +6,6 @@ ya pkg add ndtoan96/ouch
 ya pkg add AnirudhG07/nbpreview
 ya pkg add AnirudhG07/rich-preview
 ya pkg add yazi-rs/plugins:chmod
-ya pack -a Lil-Dank/lazygit
 ya pkg add pirafrank/what-size
 ya pkg add yazi-rs/plugins:git
 

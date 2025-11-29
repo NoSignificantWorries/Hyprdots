@@ -21,5 +21,5 @@ done
 # Перезапускаем waybar
 killall waybar 2>/dev/null
 sleep 1
-waybar -c "${CONFIG_DIR}/config.jsonc" &
+waybar -c "${CONFIG_DIR}/config.jsonc" & 2>/dev/null
 
